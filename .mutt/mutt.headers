@@ -1,0 +1,10 @@
+# unset all headers
+unmy_hdr *
+
+# define own headers
+set hdrs
+
+hdr_order Date: To: Cc: Bcc: From: Subject:
+
+# my_hdr
+my_hdr From: Mustafa Oezkan <destruct.c@gmx.net>

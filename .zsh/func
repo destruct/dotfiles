@@ -1,0 +1,494 @@
+# Nice Functions
+
+# Display all function()'s with her descriptions
+function funlist()
+{
+	grep -B 1 "^function" $HOME/.zsh/func | \
+	grep -v "^\-\-$" | \
+	awk '{ if(/^#/) { gsub(/^#[:space:]*/, ""); ht=$0 }; getline; gsub(/ ?\(\)/, ":"); printf("-> %-20s %s\n", $2, ht); }' | \
+	sort -u
+}
+
+# $ wget http://asg.web.cmu.edu/rfc/rfc-index.html
+# $ w3m -dump rfc-index.html > ~/.rfcs.txt && rm rfc-index.html
+# search rfcs
+function rfcs()
+{
+	case "$1" in
+		-n) grep "^$2" ~/.rfcs.txt
+		;;
+		-s) grep -i "$2" ~/.rfcs.txt
+		;;
+		*)
+		echo "Usage: $0 { -n | -s }"
+		echo "		-n (Number)  Show RFC with Number (four digit Number!)"
+		echo "		-s (String)  Show RFC with String"
+		echo "Example: $0 -n 0822"
+		echo "Example: $0 -s usenet"
+	esac
+}
+
+# get rfcs
+function rfcg()
+{
+	if [[ $# = 0 ]]
+	then
+		echo "Usage   : rfcg RFC-Number"
+		echo "Example : rfcg 822"
+	else
+		links -dump http://www.ietf.org/rfc/rfc"$1".txt | $PAGER
+	fi
+}
+
+
+# rename //_
+function rame () { zmv '* *' '$f:gs/ /_' }
+
+# status
+function status()
+{
+	# I must use this because i use this function on different
+	# systems
+	if [ "${OS}" = "openbsd" ]; then
+		local system="$(uname -sr)"
+	else
+		if [ $(which crux) ]; then
+			local system="$(crux)"
+		else
+			local system="$(cat /etc/[A-Za-z]*[_-][rv]e[lr]*)"
+		fi
+	fi
+        print ""
+        print "Date..: "$(date "+%Y-%m-%d %H:%M:%S")""
+        print "Shell.: Zsh $ZSH_VERSION (PID = $$, $SHLVL nests)"
+        print "Term..: $TTY ($TERM), $BAUD bauds, $COLUMNS x $LINES cars"
+        print "Login.: $LOGNAME (UID = $EUID) on $HOST"
+        print "System: $system"
+        print "Uptime:$(uptime)"
+        print ""
+}
+
+# Screenshot (Use import from Image Magick)
+function sshot()
+{
+	cd ~/images/screens; sleep 5; import -window root `hostname`.`date +%Y-%m-%d`.png
+}
+
+# $ ls -l =ls
+# -rwxr-xr-x  1 root root 75948 2004-07-16 13:37 /bin/ls
+# $ pls ls
+# -rwxr-xr-x  1 root root 75948 2004-07-16 13:37 /bin/ls
+function pls()
+{
+	ls -l =$1
+}
+
+# for OpenBSD (to use make print-index >> ~/.ports)
+# $ port -p zsh                                                                   
+#   
+#   Port:   zsh-4.2.0
+#   Path:   shells/zsh
+#   Info:   Z shell, Bourne shell-compatible, release flavor
+#   Maint:  David Lebel <lebel@openbsd.org>
+#   Index:  shells
+#   L-deps: 
+#   B-deps: :devel/autoconf/2.57 :devel/metaauto
+#   R-deps: 
+if [ "${OS}" = openbsd ]; then
+function port()
+{
+	case "$1" in
+		-p) =grep -i "^Port.*$2" -B1 -A8 ~/.ports
+		;;
+		-i) =grep -i "^Info.*$2" -B1 -A5 ~/.ports
+		;;
+		*)
+		echo "Usage: $0 {-i | -p} string}"
+		echo "      -i (Info)      Search parse Info:"
+		echo "      -p (Port)      Search parse Port:"
+	esac
+}
+fi
+
+# mkdir && cd
+function mcd() { mkdir "$1"; cd "$1" }
+
+# cd && ls
+function cl() { cd $1 && ls -a }
+
+# colord man-pages if u want colors, regex - search, like vim.
+function vman() 
+{ 
+	man $* | col -b | view -c 'set ft=man nomod nolist' -
+}
+
+# quick hash
+function quick-hash()
+{
+	for i in $1/*(/)
+	do
+		hash -d ${i##*/}=$i
+	done
+}
+
+# get current kernel info
+function latest-kernel() 
+{
+			printf 'GET /kdist/finger_banner HTTP1.0\n\n' | nc6 www.kernel.org 80 | grep latest
+}
+
+# find all suid files
+function suidfind () 
+{ 
+	ls -l /**/*(su0x)
+}
+
+# suid files (better as above)
+function findsuid()
+{
+        find / -type f \( -perm -4000 -o -perm -2000 \) -ls > ~/.suid/suidfiles.`date "+%Y-%m-%d"`.out 2>&1
+        find / -type d \( -perm -4000 -o -perm -2000 \) -ls > ~/.suid/suiddirs.`date "+%Y-%m-%d"`.out 2>&1
+        find / -type f \( -perm -2 -o -perm -20 \) -ls > ~/.suid/writefiles.`date "+%Y-%m-%d"`.out 2>&1
+        find / -type d \( -perm -2 -o -perm -20 \) -ls > ~/.suid/writedirs.`date "+%Y-%m-%d"`.out 2>&1
+}
+
+# Show the path from a symlink to its ultimate source.
+function folsym() 
+{
+    if [[ -e $1 || -h $1 ]]; then
+	file=$1
+    else
+	file=`which $1`
+    fi
+    if [[ -e $file || -L $file ]]; then
+	if [[ -L $file ]]; then
+	echo `ls -ld $file | perl -ane 'print $F[7]'` '->' `perl -le '$file = $ARGV[0];
+		$dest = readlink $file;
+			if ($dest !~ m{^/}) {
+				$file =~ s{(/?)[^/]*$}{$1$dest};
+			} else {
+				$file = $dest;
+			}
+			$file =~ s{/{2,}}{/}g;
+			while ($file =~ s{[^/]+/\.\./}{}) {
+				;
+			}
+			$file =~ s{^(/\.\.)+}{};
+			print $file' $file`
+
+	else
+	    ls -d $file
+	fi
+    else
+	echo $file
+    fi
+}
+
+# check whether the specified remote port is open or not
+function remotestat() 
+{
+        case $# in
+		2) nmap -sT -p $2 $1 | egrep "^$2/" ;;
+		*) echo "usage: $0 <host> <port>" 1>&2;
+        esac
+}
+
+# Search File
+function search_file() 
+{
+	regex=$1
+	case $# in
+		1) dir='.' ;;
+		2) dir=$2 ;;
+		*) echo "usage: $0 <pattern> <dir>" >& 2
+		return ;;
+	esac
+
+	find ${dir} -type f | perl -lne "print if /${regex}/" 2>/dev/null
+}
+
+# Often needed (if i rape '$LS_COLORS' again *g*)
+function _cols()
+{
+ esc="\033["
+ echo -e "\t 40\t 41\t 42\t 43\t 44\t 45\t 46\t 47"
+ for fore in 30 31 32 33 34 35 36 37; do
+   line1="$fore  "
+   line2="    "
+   for back in 40 41 42 43 44 45 46 47; do
+     line1="${line1}${esc}${back};${fore}m Normal  ${esc}0m"
+     line2="${line2}${esc}${back};${fore};1m Bold    ${esc}0m"
+   done
+   echo -e "$line1\n$line2"
+ done
+}
+
+# source zsh configs (i often edit them)
+function src_zsh() 
+{
+	source ~/.zsh/alias
+	source ~/.zsh/binds
+	source ~/.zsh/comp
+	source ~/.zsh/export
+	source ~/.zsh/func
+	source ~/.zsh/misc
+	source ~/.zsh/opts
+	source ~/.zsh/ctl
+	source ~/.zsh/logout
+}
+
+# fetch the latest kernel
+function getkernel() 
+{
+	local kernel=`lynx -dump http://www.kernel.org/kdist/finger_banner | awk '/latest stable/ {print $10}'`
+	local used=`uname -r`
+	echo "Latest version:	$kernel"
+	echo "Local version:	$used"
+
+	if [ $kernel != $used ]; then
+		echo 
+		echo "There is a newer kernel version."
+		read -q "?Do you want me to fetch it for you? [y/n] " || return 0
+		local ver=`echo $kernel | awk -F. '{print $1"."$2}'`
+		local get="http://www.kernel.org/pub/linux/kernel/v$ver/linux-$kernel.tar.bz2"
+		local sign="http://www.kernel.org/pub/linux/kernel/v$ver/linux-$kernel.tar.bz2.sign"
+		wget -c -P /usr/src $get &&
+		wget -c -P /usr/src $sign &&
+		echo 'done'
+		echo 'checking signature:'
+		gpg --verify `basename $sign $kernel` &&
+		echo 'delete $sign'
+		rm $sign
+		echo
+		echo 'done'
+	fi
+}
+
+# reload functions
+function refunc()
+{
+        for func in $argv
+        do
+                unfunction $func
+                autoload $func
+        done
+}
+
+# Show Memory usage
+function memusage () 
+{
+     ps aux | awk '{if (NR > 1) print $5; if (NR > 2) print "+"} END { print "p" }' | dc
+}
+
+# Quick hack to read slashdot news
+function slashdot()
+{
+        CURDIR=${pwd};
+        cd /tmp;
+        if [[ -s /tmp/slashdot.rdf ]]
+                then
+                        rm slashdot.rdf
+                        fi
+                        wget -q slashdot.org/slashdot.rdf;
+			mv to slashdot.rdf
+			grep "title" slashdot.rdf | awk -F '<title>' '{ print $2 }' |
+awk -F '</title>' '{ print "\t + "$1 }' | tail -n 11 | head; cd $CURDIR
+}
+
+# Quick hack to read heise news
+function heise()
+{
+        CURDIR=${pwd};
+        cd /tmp;
+        if [[ -s /tmp/heise.rdf ]]
+                then
+                        rm heise.rdf
+                        fi
+                        wget -q http://www.heise.de/newsticker/heise.rdf;
+                        grep "title" heise.rdf | awk -F '<title>' '{print $2 }' | awk -F '</title>' '{ print "\t + "$1 }' | tail -n 11 | head; cd $CURDIR
+}
+
+# check wich dir is located on which partition
+function dirspace()
+{
+        for dir in ${(s.:.)PATH};
+        do
+                (cd $dir; echo "-<$dir>"; du -shx .; echo);
+        done
+}
+
+# Show files in tar archives
+show-archive()
+{
+        if [[ -f $1 ]]
+        then
+                case $1 in
+                        *.tar.gz)      gunzip -c $1 | tar -tf - -- ;;
+                        *.tar)         tar -tf $1 ;;
+                        *.tgz)         tar -ztf $1 ;;
+                        *.zip)         unzip -l $1 ;;
+                        *.bz2)         bzless $1 ;;
+                        *)             echo "WTF?!? -> '$1'" ;;
+                esac
+        else
+                echo "'$1' is not a valid archive"
+        fi
+}
+
+# Extract archives
+xtrct () 
+{
+        if [[ -f "$1" ]]
+        then
+                case "$1" in
+                        *.tar.bz2)  tar xfj "$1" ;;
+                        *.tar.gz)   tar xzf "$1"   ;;
+                        *.ace)      unace e "$1"     ;;
+                        *.rar)      unrar x "$1"     ;;
+                        *.deb)      ar -x "$1"       ;;
+                        *.bz2)      bzip2 -d "$1"    ;;
+                        *.lzh)      lha x "$1"       ;;
+                        *.gz)       gunzip -d "$1"   ;;
+                        *.tar)      tar -xvf "$1"    ;;
+                        *.tgz)      gunzip -d "$1"   ;;
+                        *.tbz2)     tar -jxvf "$1"   ;;
+                        *.zip)      unzip "$1"       ;;
+                        *.Z)        uncompress "$1"  ;;
+                        *.shar)     sh "$1"          ;;
+                        *)          echo "'"$1"' Error. Please go away" ;;
+                esac
+        else
+                echo "'"$1"' is not a valid file"
+        fi
+}
+
+# Zsh Globbing
+function H-Glob()
+{
+echo -e "
+     /      directories
+      .      plain files
+      @      symbolic links
+      =      sockets
+      p      named pipes (FIFOs)
+      *      executable plain files (0100)
+      %      device files (character or block special)
+      %b     block special files
+      %c     character special files
+      r      owner-readable files (0400)
+      w      owner-writable files (0200)
+      x      owner-executable files (0100)
+      A      group-readable files (0040)
+      I      group-writable files (0020)
+      E      group-executable files (0010)
+      R      world-readable files (0004)
+      W      world-writable files (0002)
+      X      world-executable files (0001)
+      s      setuid files (04000)
+      S      setgid files (02000)
+      t      files with the sticky bit (01000)
+ print *(m-1)          # Dateien, die vor bis zu einem Tag modifiziert wurden.
+ print *(a1)           # Dateien, auf die vor einem Tag zugegriffen wurde.
+ print *(@)            # Nur Links
+ print *(Lk+50)        # Dateien die ueber 50 Kilobytes grosz sind
+ print *(Lk-50)        # Dateien die kleiner als 50 Kilobytes sind
+ print **/*.c          # Alle *.c - Dateien unterhalb von \$PWD
+ print **/*.c~file.c   # Alle *.c - Dateien, aber nicht 'file.c'
+ print (foo|bar).*     # Alle Dateien mit 'foo' und / oder 'bar' am Anfang
+ print *~*.*           # Nur Dateien ohne '.' in Namen
+ chmod 644 *(.^x)      # make all non-executable files publically readable
+ print -l *(.c|.h)     # Nur Dateien mit dem Suffix '.c' und / oder '.h'
+ print **/*(g:users:)  # Alle Dateien/Verzeichnisse der Gruppe >users<
+ echo /proc/*/cwd(:h:t:s/self//) # Analog zu >ps ax | awk '{print $1}'<"
+}
+
+# Display the size of all dirs at $PWD
+function dirsize()
+{
+	if [ -z $1 ]; then
+		dir="."
+	else
+		dir=$1
+	fi
+	find $dir -type d -maxdepth 1 -mindepth 1 -exec du -sh '{}' \; 2>/dev/null \
+	| perl -pe "s/\t.*\/(.*)$/\t$(echo '\033[01;32m')\1$(echo '\033[0m')/gi" 
+	echo
+	echo "Total: " $(du -sh $dir 2>/dev/null | awk '{print $1}')
+}
+
+# mp3 -> wav
+function mkaudiocd()
+{
+        cd ~/stuff/ripps
+        for i in *.[Mm][Pp]3; do mv "$i" `echo $i | tr '[A-Z]' '[a-z]'`; done
+        for i in *.mp3; do mv "$i" `echo $i | tr ' ' '_'`; done 
+        for i in *.mp3; do mpg123 -w `basename $i .mp3`.wav $i; done 
+        normalize -m *.wav
+	rm -rf *mp3
+}
+
+# colorizing the output of make
+if [[ -x ~/bin/makefilter ]]
+then
+	make() { command make "$@" |& makefilter }
+fi
+
+# check if ~./errorlogs/ exist (otherwise create it) and create a logfile
+function mmake()
+{
+	[[ ! -d ~/.errorlogs ]] && mkdir ~/.errorlogs
+	=make -n install > ~/.errorlogs/${PWD##*/}-makelog
+}
+
+# display a of possible passwords
+function makepasswords()
+{
+	perl <<EOPERL
+	my @a = ("a".."z","A".."Z","0".."9",(split //, q{#@,.<>$%&()*^}));
+	for (1..10) { 
+		print join "", map { \$a[rand @a] } (1..rand(3)+7);
+		print qq{\n} 
+	}
+EOPERL
+}
+
+# print current settings of LC_*
+function plocale()
+{
+	print LC_ALL=$LC_ALL
+	print LANG=$LANG
+	print LC_CTYPE=$LC_CTYPE
+	print LC_NUMERIC=$LC_NUMERIC
+	print LC_TIME=$LC_TIME
+	print LC_COLLATE=$LC_COLLATE
+	print LC_MONETARY=$LC_MONETARY
+	print LC_MESSAGES=$LC_MESSAGES
+	print LC_PAPER=$LC_PAPER
+	print LC_NAME=$LC_NAME
+	print LC_ADDRESS=$LC_ADDRESS
+	print LC_TELEPHONE=$LC_TELEPHONE
+	print LC_MEASUREMENT=$LC_MEASUREMENT
+	print LC_IDENTIFICATION=$LC_IDENTIFICATION
+}
+
+
+# PROG: invoke this every time when u change .zshrc to recompile it.
+function src()
+{
+        autoload -U zrecompile
+                [ -f ~/.zshrc ] && zrecompile -p ~/.zshrc
+                [ -f ~/.zcompdump ] && zrecompile -p ~/.zcompdump
+                [ -f ~/.zshrc.zwc.old ] && rm -f ~/.zshrc.zwc.old
+                [ -f ~/.zcompdump.zwc.old ] && rm -f ~/.zcompdump.zwc.old
+                source ~/.zshrc
+}
+
+vlf2mpeg () 
+{
+	if [[ -z "$1" || ! -e "$1" ]]
+	then
+		echo Usage: $0 VideoFile.vlf
+	else
+		ffmpeg -i $1 -ab 56 -ar 22050 -b 500 -s 320x240 ${1:r}.mpeg
+fi
+}

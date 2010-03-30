@@ -1,0 +1,43 @@
+bind    index   <up>            previous-entry
+bind    index   <down>          next-entry
+bind    index   <delete>        delete-message
+
+# main menus arrows
+macro   browser <left>          "<change-dir>..\n"   "Upper directory"
+bind    browser <right>         select-entry
+macro   index   <left>          "<change-folder>?"   "Browser"
+bind    index   <right>         display-message
+bind    pager   <left>          exit
+bind    pager   <right>         view-attachments
+bind    attach  <left>          exit
+bind    attach  <right>         view-attach
+
+#  Defining a default directory for saving attachments to.
+#  The trick used here is to "jump" to the beginning of the input
+#  (using ^A) which leaves default value on the input.
+#  Then you can add the default directory, eg "~/mail/ATTACH/".
+macro attach S "<save-entry>~/mail/Attach/<enter>" "Save attachements"
+
+# show only new / all messages
+macro index .n "l~N\n" "Show only new messages"
+macro index .a "l~A\n" "Show all messages"
+
+# Jumping to the next mail that is still unread.
+# '\t' means <TAB> (Tabulator)!
+bind    index   \t      next-unread
+bind    pager   \t      next-unread
+
+# use getmail for multiple POP - Accounts
+macro   index   A     "!getmail\n" "Getting new mail"
+macro   pager   A     "!getmail\n" "Getting new mail"
+macro   browser A     "!getmail\n" "Getting new mail"
+
+# b toggles sidebar visibility
+macro index b ':toggle sidebar_visible^M'
+macro pager b ':toggle sidebar_visible^M'
+
+# Relocate deleted messages in =Trash
+macro index d s=Trash "Move to Trash"
+macro pager d s=Trash "Move to Trash"
+
+

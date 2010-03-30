@@ -1,0 +1,4 @@
+alias zsh-workers <zsh-workers@sunsite.dk>
+alias crux.nu <crux@lists.crux.nu>
+
+macro index ,r "T~N | ~O\nN^T~A\n" "mark all read"

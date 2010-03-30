@@ -1,0 +1,9 @@
+# Clear when if it's a physical console
+if [ ! $DISPLAY ]; then
+	if [ ! $SSH_CLIENT ]; then
+		reset
+	fi
+fi
+
+# Clear the screen so next person can't see anythin from the session
+#clear
