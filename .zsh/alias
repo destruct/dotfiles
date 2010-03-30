@@ -38,7 +38,6 @@ alias C='./configure'
 alias CH='./configure --help | $PAGER'
 alias view="${EDITOR} -R" 
 alias np="audtool2 current-song"
-#alias mutt="muttng"
 alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias eless='~/.vim/macros/less.sh'
 alias irssi='if pgrep irssi;then screen -x irssi;else screen -S irssi irssi;fi'
@@ -97,8 +96,6 @@ if [ "${OS}" = openbsd ]; then
 	alias Sdesc='make show=DESCRIPTION'
 fi
 
-# update all installed ports on Crux
-alias upallports='prt-get listinst|xargs prt-get update --margs="-f" --log'
 
 # ssh to some hosts
 alias router="ssh musti@hex"

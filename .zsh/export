@@ -109,13 +109,11 @@ else
 	esac
 fi
 
-# setting PS2
-export PS2=$'%{\e[0;33m%}%_> %{\e[0m%]';
 
 # *term show current directory
 if [ $DISPLAY ]; then
 	case $TERM in
-		*xterm*|rxvt|rxvt-unicode|rxvt-256color|(E|a|dt)term)
+		*xterm*|rxvt|rxvt(-unicode|256color)|(E|a|dt)term)
 		precmd () {
 			print -Pn "\033]0; %n@%m %20<..<%~  \a"
 		}
@@ -205,15 +203,10 @@ LS_COLORS=$LS_COLORS:'*.wmv=35;4'
 LS_COLORS=$LS_COLORS:'*.WMV=35;4'
 export LS_COLORS
 
-# Set DIR_COLORS
-# eval `dircolors -b ~/.dir_colors`
-# Use dircolors or LS_COLORS, it`s your decision
-
 # some important hosts
 hosts=( ftp.{open,free,net}bsd.org
 	ftp.de.kernel.org
 	ftp.de.geocities.com
-	www.destrukt.741.com
 	ftp.leo.org)
 
 zstyle ':completion:*:*:(zfanon|ftp|ncftp):*' hosts $hosts
