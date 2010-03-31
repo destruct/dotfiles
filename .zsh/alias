@@ -5,7 +5,8 @@ if [[ -x $(which gls) ]]; then
 	alias l='gls -alF --color=always'
 else
 	alias l='ls -F --color=always'
-	alias ll='ls -lF --color=always'
+	alias ll='ls -hovA --indicator-style=file-type --color=always --group-directories-first \
+	--time=ctime --time-style=full-iso '
 fi
 
 alias lsa='ls -a --color=always .*(.)'			# only show dot-files
@@ -41,18 +42,10 @@ alias np="audtool2 current-song"
 alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias eless='~/.vim/macros/less.sh'
 alias irssi='if pgrep irssi;then screen -x irssi;else screen -S irssi irssi;fi'
-alias burniso="sudo cdrecord -v speed=52 dev=/dev/hdd -driveropts=burnfree --eject"
-alias burnblank="sudo cdrecord dev=/dev/hdd blank=fast"
-alias burnaudio="sudo cdrecord -v speed=52 dev=/dev/hdd -driveropts=burnproof --eject -pad -audio"
 alias etodo="vim ~/.TODO"
 
-# Thats for CRUX because it have no ``updatedb'' because updatedb
-# isn't available as "real" executable. updatedb is just a symlink
-# again /usr/bin/{s,}locate
-if [[ -x /usr/bin/crux ]] && [[ -x $(which slocate) ]]; then
-	alias hupdatedb="sudo slocate -U ${HOME} --output=${HOME}/.locatedb -e /home/musti/tmp,/home/musti/mail,/home/musti/.cpan"
-	alias hlocate="slocate --database=${HOME}/.locatedb $@"
-fi
+alias makepkg="makepkg -s -c"
+alias pacman="sudo pacman"
 
 # suffix aliases
 alias -s pdf=acroread
@@ -96,8 +89,4 @@ if [ "${OS}" = openbsd ]; then
 	alias Sdesc='make show=DESCRIPTION'
 fi
 
-
-# ssh to some hosts
 alias router="ssh musti@hex"
-alias katana="ssh musti@katana"
-alias paladin="ssh musti@paladin"

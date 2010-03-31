@@ -7,7 +7,6 @@ hash -d F=~/films/
 hash -d SR=/usr/src/
 hash -d P=/usr/ports/
 hash -d PJ=~/projects/
-hash -d W=~/.wmi/
 hash -d I=~/.irssi/
 hash -d VL=/var/log
 hash -d RC=/etc/rc.d

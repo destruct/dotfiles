@@ -1,197 +1,52 @@
-# Set options
-
-# no fucking beeps ;)
-setopt nobeep
-
-# Send the HUP signal to running jobs when the shell exits.
-setopt nohup
-
-# Treat  the  `#',  `~' and `^' characters as part of
-# patterns for filename generation, etc.  (An initial
-# unquoted `~' always produces named directory expan­
-# sion.) 
-setopt extendedglob
-
-# If the internal history needs to be trimmed to add the current
-# command line, setting this option will cause the oldest history 
-# event that has a duplicate to be lost before losing a unique event
-# from the list.  You should be sure to set the value of HISTSIZE to
-# a larger number than SAVEHIST in order to give you some room for 
-# the duplicated events, otherwise this option will behave just like
-# HIST_IGNORE_ALL_DUPS once the history fills up with unique events.
-setopt hist_expire_dups_first
-
-# If this option is unset, output flow control via start/stop
-# characters (usually assigned to ^S/^Q) is disabled in the shell's 
-# editor.
-setopt flow_control
-
-# Beep on an ambiguous completion.  More accurately, this forces the
-# completion widgets to return status 1 on an ambiguous completion 
-# which causes the shell to beep if the option BEEP is also 
-# this may be modified if completion is called from a user-defined
-# widget.
-setopt listbeep
-
-# Make cd push the old directory onto the directory stack.
-setopt autopushd
-
-# If set, parameter expansion, command substitution and arithmetic 
-# expansion are performed in prompt
-setopt prompt_subst
-
-# Make the echo builtin compatible with the BSD man page echo(1)
-# command.  This disables backslashed escape sequences in echo 
-# strings unless the -e option is specified.
-setopt bsdecho
-
-# change directory if invalid command 
-# and the command is a directory
-setopt auto_cd
-
-# If the argument to a cd command (or an  implied  cd
-# with  the  AUTO_CD  option set) is not a directory,
-# and does not begin with a slash, try to expand  the
-# expression as if it were preceded by a `~' (see the
-# section `Filename Expansion').
-setopt cd_able_vars
-
-# If a completion is performed with the cursor within
-# a word, and a full completion is inserted, the cur­
-# sor  is moved to the end of the word.  That is, the
-# cursor is moved to the end of the word if either  a
-# single match is inserted or menu completion is per­
-# formed.
-setopt always_to_end
-
-# try to make the completion list smaller
-setopt listpacked
-
-# if the braces aren't in either of the above forms
-setopt braceccl
-
-# When listing files that are possible completions, show the
-# type of each file with a trailing identifying mark.
-setopt listtypes
-
-# Do  not  query  the user before executing `rm *' 
-# or `rm path/*'.
-setopt rmstarsilent 
-
-# If querying the user before executing `rm *' or `rm path/*',
-# first wait ten seconds and ignore anything typed in that time.
-# This avoids the problem of reflexively answering `yes' to the query
-# when one didn't really mean it. The wait and query can always be
-# avoided by expanding the `*' in ZLE (with tab).
-setopt rmstarwait
-
-# When searching for history entries in the line editor, do not display
-# duplicates of a line previously found, even if the duplicates are not
-# contiguous.                       
-setopt HISTFINDNODUPS
-
-# When writing out the history file, older commands that duplicate newer ones
-# are omitted.
-setopt HISTSAVENODUPS
-
-# Remove the history (fc -l) command from the history when invoked.
-setopt hist_no_store
-
-# Do not enter command lines into the history list
-# if they are duplicates of the previous event.
-setopt hist_ignore_dups
-
-# This option both imports new commands from the history file, and also
-# causes your typed commands to be appended to the history file (the
-# latter is like specifying INC_APPEND_HISTORY).
-# The history lines are also output with timestamps ala
-# EXTENDED_HISTORY (which makes it easier to find the spot where
-# we left off reading the file after it gets re-written).
-setopt sharehistory 
-
-# Remove command lines from the history list when the first character on
-# the line is a space, or when one of the expanded aliases contains a
-# leading space.
-# Note that the command lingers in the internal history until the next
-# command is entered before it vanishes, allowing you to briefly reuse
-# or edit the line.  If you want to make it vanish right away without
-# entering another command, type a space and press return.
-setopt hist_ignore_space
-
-# HIST_REDUCE_BLANKS
-# Remove superfluous blanks from each command line
-# being added to the history list.
-setopt hist_reduce_blanks
-
-# If this is set, zsh sessions will append their history list to
-# the history file, rather than overwrite it. Thus, multiple parallel
-# zsh sessions will all have their history lists added to the
-# history file, in the order they are killed
-setopt appendhistory
-
-# Try to correct the spelling of all arguments in a line.
-#setopt correctall
-
-# List jobs in the long format by default.
-setopt longlistjobs 
-
-# Report the status of background and suspended  jobs
-#  before   exiting   a   shell   with   job  control.
-setopt checkjobs
-
-# Exchanges the meanings of `+' and `-' when used with 
-# a number to specify a directory in the stack.
-setopt pushdminus
-
-# load zcalc 
-#autoload -z zcalc
-
-# needed for the shell function based completion system
+# autoload needed for the shell function based completion system
 zmodload zsh/complist
 zmodload zsh/computil
 autoload -U compinit
 compinit
 
+# Options
+
+setopt nobeep			# no beeps
+setopt nohup			# don't kill jobs
+setopt extendedglob		# Treat the `#', `~' and `^' characters as part of patterns
+setopt hist_expire_dups_first	# 
+setopt flow_control
+setopt listbeep
+setopt autopushd		# cd push the old directory onto the directory stack
+setopt prompt_subst		# 
+setopt bsdecho			# the echo builtin compatible with the BSD man page echo(1)
+setopt autocd
+setopt cd_able_vars
+setopt always_to_end
+setopt listpacked		# make the completion list smaller
+setopt braceccl			# expand expressions in braces
+setopt listtypes
+setopt histfindnodups
+setopt histsavenodups
+setopt hist_no_store		# remove the history (fc -l) command from the history list when invoked
+setopt hist_ignore_dups		
+setopt sharehistory 
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt appendhistory
+setopt longlistjobs		# List jobs in the long format by default
+setopt checkjobs
+setopt pushdminus
+setopt pushdignoredups 
+setopt shortloops		# allow the short forms of for, repeat, select, if
+unsetopt bgnice 
+setopt printeightbit
+setopt globdots
+setopt interactivecomments
+setopt notify
+setopt equals
+
 # This is a multiple move based on zsh pattern matching
 autoload zmv
 autoload zcp
+
 
 # Like xargs, but instead of reading lines of arguments 
 # from standard input, it takes them from the command line. 
 autoload -U zargs
 
-# Don't push multiple copies of the same directory onto the 
-# directory stack
-setopt pushdignoredups 
-
-# Allow the short forms of for, select, if, 
-# and function constructs.
-setopt shortloops
-
-# Run all background jobs at a lower priority.  
-# This option is set by default.
-unsetopt bgnice 
-
-# Print eight bit characters literally in completion lists, etc.
-# This option is not necessary if your system correctly returns the
-# printability of eight bit characters (see man page ctype(3)).
-setopt printeightbit
-
-# Do not require a leading `.' in a filename to be matched
-# explicitly.
-setopt globdots
-
-# Allow comments even in interactive shells.
-setopt interactivecomments
-
-# Report the status of background jobs immediately, rather than
-# waiting until just before printing a prompt.
-setopt notify
-
-# cd directly into a dir in $PORTS_DIE from anywhere
-if [ "$OS" = openbsd ]; then
-		cdpath=( ${PORTS_DIR} )
-fi
-
-# Perform = filename expansion.
-setopt equals
