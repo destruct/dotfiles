@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Aliases
 
 # for OpenBSD i use gls instead ls (standard openbsd ls doesn`t support --color)
@@ -76,7 +78,7 @@ alias -s zip=show-archive
 
 # grep with colors
 if [[ "${OS}" = linux-gnu ]]; then
-	export GREP_COLOR='1;31'
+	export GREP_COLORS='1;31'
 	export GREP_OPTIONS='--color=auto'
 	alias grep='grep $GREP_OPTIONS $*'
 fi

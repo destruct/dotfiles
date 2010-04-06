@@ -32,6 +32,8 @@
 
 ! Font
 urxvt*font:		-windows-proggycleanszbp-medium-r-normal--13-80-96-96-c-70-iso8859-1
+urxvt*boldFont:		-windows-proggycleanszbp-medium-r-normal--13-80-96-96-c-70-iso8859-1
+
 
 ! Options
 urxvt*geometry:		80x25

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Clear when if it's a physical console
 if [ ! $DISPLAY ]; then
 	if [ ! $SSH_CLIENT ]; then

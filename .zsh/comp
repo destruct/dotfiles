@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # 'zstyle' (Defines the given style for the pattern) 
 # Normally, the completion code will not produce the directory names
 # '.' and '..' as possible completions. If this style is set to

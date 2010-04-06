@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # often visited directory
 hash -d D=~/downloads/
 hash -d Z=~/.zsh/

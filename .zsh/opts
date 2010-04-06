@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # autoload needed for the shell function based completion system
 zmodload zsh/complist
 zmodload zsh/computil

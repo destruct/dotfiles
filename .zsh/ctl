@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Completion for some stuff
 compctl -g '*.tar.Z *.tar.gz *.tgz *.zip *.ZIP *.tar.bz2' + -g '*' tar xtrct show-archive
 compctl -g '*.(gz|z|Z|t[agp]z|tarZ|tz)' + -g '*(-/)' gunzip gzcat zcat
