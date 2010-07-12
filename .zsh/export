@@ -16,7 +16,7 @@ fi
 # Exports 
 export CVS_RSH=ssh 
 export EDITOR=vim
-export PAGER=less
+export PAGER=vimpager
 export HOSTNAME="`hostname`"
 export BROWSER=lynx
 
@@ -40,7 +40,10 @@ for dir in \
 	/usr/local/bin \
 	/opt/diet/bin \
 	/opt/vmware/bin \
-	/opt/java/bin
+	/opt/java/bin \
+	/usr/bin/perlbin/** \
+	/usr/lib/perl5/**/bin \
+	/usr/share/perl5/vendor_perl/auto/share/dist/Cope 
 do
 	[ -d "${dir}" ] && PATH="${PATH}:${dir}"
 done

@@ -1,34 +1,16 @@
 ! .Xdefaults
 ! Author Contact: destruct.c{at}gmx{dot}net
 
-! Colors
-*background:  #222222
-*foreground: white
-! Black
-*color0:      #000000
-*color8:      #555753
-! Red
-!*color1:      #ff6565
-*color1: #f12e2e
-*color9:      #ff8d8d
-! Green
-*color2:      #93d44f
-*color10:     #c8e7a8
-! Yellow
-*color3:      #eab93d
-*color11:     #ffc123
-! Blue
-*color4:      #204a87
-*color12:     #3465a4
-! Magenta
-*color5:      #ce5c00
-*color13:     #f57900
-! Cyan 
-*color6:      #89b6e2
-*color14:     #46a4ff
-! White
-*color7:      #cccccc
-*color15:     #ffffff
+#include ".config/xcolors/mine"
+!#include ".config/xcolors/cinderwick"
+!#incldue ".config/xcolors/sicpsnake2"
+!#include ".config/xcolors/unexist"
+!#include ".config/xcolors/tango"
+!#include ".config/xcolors/digerati"
+!#include ".config/xcolors/jasonwryan"
+!#include ".config/xcolors/zenburn"
+!#include ".config/xcolors/phraktured"
+
 
 ! Font
 urxvt*font:		-windows-proggycleanszbp-medium-r-normal--13-80-96-96-c-70-iso8859-1

@@ -7,7 +7,7 @@ reset all
 push V
 
 # source the config-files
-source ~/.mutt/mutt.colors
+source ~/.mutt/mutt.colors_vimbrant
 source ~/.mutt/mutt.general
 source ~/.mutt/mutt.mailboxes
 source ~/.mutt/mutt.bind

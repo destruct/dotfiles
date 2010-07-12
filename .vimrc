@@ -3,8 +3,9 @@
 "   Contact: destruct.c{at}gmx{dot}net
 
 syntax on                      " syntax on
-colorscheme destruct           " colorsheme
+colorscheme neverland2           " colorsheme
 
+set t_Co=256
 set notitle
 set nocompatible               " no-vi compatible
 set autoindent                 " autoindent

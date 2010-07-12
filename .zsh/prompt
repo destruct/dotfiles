@@ -27,7 +27,7 @@ export yellow=$'%{\e[0;33m%}'
 if (( EUID == 0 )); then
 	PS1=$'${red}%n${BLACK}::${green}%b${green}%m${BLACK}::${WHITE}%20<..<%~ ${BLACK}=>${NC} ';
 else 
-	PS1=$'${CYAN}%n${BLACK}::${green}%b${green}%m${BLACK}::${WHITE}%20<..<%~ ${BLACK}=${NC} ';
+	PS1=$'${CYAN}%n${BLACK}::${green}%b${green}%m${BLACK}::${WHITE}%20<..<%~ ${BLACK}=>${NC} ';
 fi
 
 

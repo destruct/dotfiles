@@ -56,7 +56,7 @@ function status()
 	else
 		if [ $(which crux) ]; then
 			local system="$(crux)"
-		else
+		else 
 			local system="$(cat /etc/[A-Za-z]*[_-][rv]e[lr]*)"
 		fi
 	fi

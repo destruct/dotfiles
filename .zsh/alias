@@ -43,11 +43,11 @@ alias view="${EDITOR} -R"
 alias np="audtool2 current-song"
 alias sx='startx -- -nolisten tcp >& $HOME/.startx-errors'
 alias eless='~/.vim/macros/less.sh'
-alias irssi='if pgrep irssi;then screen -x irssi;else screen -S irssi irssi;fi'
 alias etodo="vim ~/.TODO"
 
 alias makepkg="makepkg -s -c"
 alias pacman="sudo pacman"
+alias .='pwd'
 
 # suffix aliases
 alias -s pdf=acroread
