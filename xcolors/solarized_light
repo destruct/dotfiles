@@ -1,0 +1,16 @@
+URxvt*fading:                 0
+URxvt*background:             #fdf6e3
+URxvt*foreground:             #839496
+URxvt*fadeColor:              #fdf6e3
+URxvt*cursorColor:            #586e75
+URxvt*pointerColorBackground: #93a1a1
+URxvt*pointerColorForeground: #586e75
+URxvt*color0:                 #073642
+URxvt*color8:                 #fdf6e3
+URxvt*color10:                #93a1a1
+URxvt*color11:                #839496
+URxvt*color12:                #657b83
+URxvt*color14:                #586e75
+URxvt*color7:                 #839496
+URxvt*color15:                #002b36
+

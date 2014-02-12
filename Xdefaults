@@ -1,0 +1,163 @@
+#include "/home/musti/configs/xcolors/sicp"
+
+urxvt*imLocale:         en_us.utf8
+urxvt*geometry:         105x30
+urxvt*depth:            24
+urxvt*transparent:      true
+urxvt*internalBorder:   2
+urxvt*fading:           0
+urxvt*shading:          10
+urxvt*tintColor:        #000000
+urxvt*cursorColor:      #FD971F
+urxvt*inheritPixmap:    false
+urxvt*saveLines:        32767
+urxvt*visualBell:       true
+urxvt*scrollTtyKeypress:true
+urxvt*scrollWithBuffer: false
+urxvt*scrollTtyOutput:  false
+urxvt*scrollBar:        false
+urxvt*loginShell:       true
+urxvt*cutchars:         "()*,<>[]{}|'"
+urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+urxvt*secondaryScroll:  true
+urxvt*mapAlert:         true
+urxvt*utmpInhibit:      true
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  ,default,option-popup,matcher,clipboard,keyboard-select,url-select
+urxvt*keysym.M-c:	perl:clipboard:copy
+urxvt*keysym.M-v:	perl:clipboard:paste
+urxvt*url-launcher:      /usr/bin/firefox
+urxvt*matcher.button:   1
+
+*font: -windows-montecarlo-medium-r-normal--11-110-72-72-c-60-microsoft-cp1252
+*boldFont: -*-dina-medium-r-*-*-15-*-*-*-*-*-*-*
+
+!==============================================================
+!
+! X C A L C
+!
+xcalc*geometry: 200x270
+xcalc*font: -*-clean-*-*-*-*-*-*-*-*-*-*-*-*
+
+! Background
+xcalc*background: #151515
+xcalc*borderColor: #111111
+
+! Screen
+xcalc*bevel.vertDistance: 5
+xcalc*bevel.background: dark khaki
+xcalc*bevel.borderColor: khaki
+xcalc*screen*background: dark khaki
+xcalc*screen*foreground: black
+xcalc*screen*borderColor: dark khaki
+
+! Buttons =====================================================
+
+! Spacing
+xcalc*button1*vertDistance: 4
+xcalc*button2*vertDistance: 4
+xcalc*button3*vertDistance: 4
+xcalc*button4*vertDistance: 4
+xcalc*button5*vertDistance: 4
+xcalc*button21*vertDistance: 4
+xcalc*button22*vertDistance: 4
+xcalc*button23*vertDistance: 4
+xcalc*button24*vertDistance: 4
+xcalc*button25*vertDistance: 4
+
+! Background
+xcalc*Command*background: #181818
+xcalc*Command*borderColor: #202020
+
+! Fix labels
+xcalc*button2.label: x^2
+xcalc*button3.label: v-
+xcalc*button20.label: /
+
+! CE
+xcalc*button4.background: firebrick4
+xcalc*button4.borderColor: firebrick3
+
+! AC
+xcalc*button5.background: firebrick3
+xcalc*button5.borderColor: firebrick1
+
+! Numpad
+xcalc*button22.background: #202020
+xcalc*button22.borderColor: #262626
+xcalc*button23.background: #202020
+xcalc*button23.borderColor: #262626
+xcalc*button24.background: #202020
+xcalc*button24.borderColor: #262626
+xcalc*button27.background: #202020
+xcalc*button27.borderColor: #262626
+xcalc*button28.background: #202020
+xcalc*button28.borderColor: #262626
+xcalc*button29.background: #202020
+xcalc*button29.borderColor: #262626
+xcalc*button32.background: #202020
+xcalc*button32.borderColor: #262626
+xcalc*button33.background: #202020
+xcalc*button33.borderColor: #262626
+xcalc*button34.background: #202020
+xcalc*button34.borderColor: #262626
+xcalc*button37.background: #202020
+xcalc*button37.borderColor: #262626
+
+! =
+xcalc*button40.background: dark olive green
+xcalc*button40.borderColor: olive drab
+
+
+!! various X stuff
+Xcursor.theme: Vanilla-DMZ
+Xcursor.size: 10
+XFontSel*sampleText.background: TEXTBG
+XFontSel*menu*showUnselectable: false
+XFontSel*MenuButton.shadowWidth: 0
+XFontSel*Toggle*ToggleStyle: check
+XFontSel*MenuButton*Justify: left
+XFontSel*MenuButton*MenuButtonStyle: select
+
+.xfontsel.pane.commandBox.quitButton.background: #252525
+.xfontsel.pane.commandBox.quitButton.foreground: snow
+.xfontsel.pane.commandBox.ownButton.background: purple
+.xfontsel.pane.commandBox.ownButton.foreground: snow
+.xfontsel.pane.commandBox.countLabel.background: snow
+.xfontsel.pane.viewPort.sampleText.background: #252525
+.xfontsel.pane.viewPort.sampleText.foreground: snow
+.xfontsel.pane.fieldBox.field0.background: #252525
+.xfontsel.pane.fieldBox.field0.foreground: snow
+.xfontsel.pane.fieldBox.field1.background: #252525
+.xfontsel.pane.fieldBox.field1.foreground: snow
+.xfontsel.pane.fieldBox.field2.background: #252525
+.xfontsel.pane.fieldBox.field2.foreground: snow
+.xfontsel.pane.fieldBox.field3.background: #252525
+.xfontsel.pane.fieldBox.field3.foreground: snow
+.xfontsel.pane.fieldBox.field4.background: #252525
+.xfontsel.pane.fieldBox.field4.foreground: snow
+.xfontsel.pane.fieldBox.field5.background: #252525
+.xfontsel.pane.fieldBox.field5.foreground: snow
+.xfontsel.pane.fieldBox.field6.background: #252525
+.xfontsel.pane.fieldBox.field6.foreground: snow
+.xfontsel.pane.fieldBox.field7.background: #252525
+.xfontsel.pane.fieldBox.field7.foreground: snow
+.xfontsel.pane.fieldBox.field8.background: #252525
+.xfontsel.pane.fieldBox.field8.foreground: snow
+.xfontsel.pane.fieldBox.field9.background: #252525
+.xfontsel.pane.fieldBox.field9.foreground: snow
+.xfontsel.pane.fieldBox.field10.background: #252525
+.xfontsel.pane.fieldBox.field10.foreground: snow
+.xfontsel.pane.fieldBox.field11.background: #252525
+.xfontsel.pane.fieldBox.field11.foreground: snow
+.xfontsel.pane.fieldBox.field12.background: #252525
+.xfontsel.pane.fieldBox.field12.foreground: snow
+.xfontsel.pane.fieldBox.field13.background: #252525
+.xfontsel.pane.fieldBox.field13.foreground: snow
+.xfontsel.pane.fieldBox*foreground: #999999
+.xfontsel.pane.fieldBox.MenuButton.borderWidth: 1
+.xfontsel.pane.fieldBox.MenuButton.internalHeight:1
+.xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
+.xfontsel.pane.fieldBox.MenuButton.shapeStyle: rectangle
+
+

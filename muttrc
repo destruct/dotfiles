@@ -1,0 +1,20 @@
+# Mutt Configuration
+# 
+# Contact: destruct.c{at}gmx.net
+
+# reset all and show Version
+reset all
+push V
+
+# source the config-files
+source ~/.mutt/mutt.colors_vimbrant
+source ~/.mutt/mutt.general
+source ~/.mutt/mutt.mailboxes
+source ~/.mutt/mutt.bind
+source ~/.mutt/mutt.ignore
+source ~/.mutt/mutt.unignore
+source ~/.mutt/mutt.headers
+source ~/.mutt/mutt.alias
+
+# sidebar etc.
+source ~/.mutt/mutt.misc

@@ -15,3 +15,6 @@ source ~/.zsh/logout
 source ~/.zsh/misc
 source ~/.zsh/opts
 source ~/.zsh/prompt
+source ~/.zsh/git
+
+

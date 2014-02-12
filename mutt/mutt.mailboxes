@@ -1,0 +1,10 @@
+mailboxes +INBOX
+mailboxes +OUTBOX
+mailboxes +Attach
+mailboxes +postponed
+mailboxes +Trash
+mailboxes +Spam
+mailboxes +INBOX.Zsh
+mailboxes +INBOX.Openbox
+mailboxes +INBOX.OpenBSD-misc 
+mailboxes +INBOX.OpenBSD-ports

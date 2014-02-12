@@ -1,0 +1,161 @@
+#!/bin/zsh
+
+# Usefull zshexports 
+(( ${+OS} )) || export OS="${OSTYPE%%[0-9.]*}"
+
+# OpenBSD stuff 
+if [ "${OS}" = openbsd ]; then 
+	(( ${+PORTS_DIR} )) || export PORTS_DIR="/usr/ports"
+fi
+
+if [ "${OS}" = openbsd ]; then
+	(( ${+CVSROOT} )) || export CVSROOT="anoncvs@anoncvs.ca.OpenBSD.org:/cvs"
+	(( ${+PKG_PATH} )) || export PKG_PATH="ftp://ftp.OpenBSD.org/pub/OpenBSD/$(uname -r)/packages/$(uname -m)"
+fi
+
+# Exports 
+export CVS_RSH=ssh 
+export EDITOR=vim
+export PAGER=vimpager
+export HOSTNAME="`hostname`"
+export BROWSER=lynx
+export XDG_CONFIG_HOME="$HOME/.config"
+export PANEL_FIFO=/tmp/panel-fifo
+export BSPWM_SOCKET=/tmp/bspwm:0.0-socket
+
+# xterm with colors
+if [[ $TERM == xterm ]]; then
+	TERM=xterm-color
+fi
+
+# check if ccache if installed
+if [ -d /usr/lib/ccache ]; then
+	CCACHE_PATH=/usr/lib/ccache:
+fi
+
+# Path
+PATH="${CCACHE_PATH}/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/opt/bin"
+
+# Check some directories and add existing to $PATH
+for dir in \
+	/opt/vmware/bin \
+	/usr/dietlibc/bin \
+	/usr/local/bin \
+	/opt/diet/bin \
+	/opt/vmware/bin \
+	/opt/java/bin \
+	/usr/bin/core_perl \
+	/usr/bin/site_perl 
+do
+	[ -d "${dir}" ] && PATH="${PATH}:${dir}"
+done
+
+# If ~/bin exist, add it to $PATH (~/bin contains some scripts, ..)
+[ -d "${HOME}/bin" ] && PATH="${PATH}:${HOME}/bin"
+
+# Man Path
+MANPATH=/usr/man:/usr/share/man:/usr/local/man:/opt/diet/man
+
+# automatically remove duplicates from these arrays
+typeset -gU path cdpath manpath fpath
+
+# history
+HISTSIZE=5000
+HISTFILE=$HOME/.zsh/history
+SAVEHIST=10000
+
+# format of process time reports with 'time'
+TIMEFMT="Real: %E User: %U System: %S Percent: %P Cmd: %J"
+
+# something paranoid :)
+
+if [ "`id -u`" = "0" ]; then
+    umask 033
+fi
+
+# watch logins
+watch=( root )
+LOGCHECK=280
+WATCHFMT='%n %a %l from %m at %t.'
+
+# some important hosts
+hosts=( ftp.{open,free,net}bsd.org
+	ftp.de.kernel.org
+	ftp.de.geocities.com
+	ftp.leo.org)
+
+zstyle ':completion:*:*:(zfanon|ftp|ncftp):*' hosts $hosts
+
+# If nonnegative, commands whose combined user and system execution
+# times (measured in seconds) are greater than this value have timing
+# statistics printed for them.
+REPORTTIME=60
+
+# No Mailcheck
+unset MAILCHECK
+
+# vimrelease
+if [ -x $(which vim) ]; then
+	export EDITOR=vim
+	export VISUAL="${EDITOR}"
+	export VIMRELEASE="`print ${${$(vim --version)[5]}:gs/.//}`"
+else
+	if [ -x $(which vi) ]; then
+		export EDITOR=vi
+	fi
+fi
+
+# vimruntime
+case ${OS} in
+	openbsd)
+	[ -d "/usr/local/share/vim/vim$VIMRELEASE" ] \
+		&& export VIMRUNTIME="/usr/local/share/vim/vim$VIMRELEASE"
+	;;
+	netbsd)
+	[ -d "/usr/pkg/share/vim/vim$VIMRELEASE" ] \
+		&& export VIMRUNTIME="/usr/pkg/share/vim/vim$VIMRELEASE"
+	;;
+	linux-gnu)
+	[ -d "/usr/share/vim/vim$VIMRELEASE" ] \
+		&& export VIMRUNTIME="/usr/share/vim/vim$VIMRELEASE" || \
+		# that's for CRUX
+		export VIMRUNTIME="/usr/share/vim"
+	;;
+esac
+
+# That's for my Linuxboxes; OpenBSD doesn't support
+# locale
+if [ "${OSTYPE}" = linux-gnu ] && [ -x $(which locale) ]; then
+	# All of the below
+        export LC_ALL="en_us.utf8"
+	# language information
+        export LANG="en_us.utf8"
+	# Character classification and case conversion.
+        export LC_CTYPE="en_us.utf8"
+	# Non-monetary numeric formats.
+        export LC_NUMERIC="en_us.utf8"
+	# Date and time formats.
+        export LC_TIME="en_us.utf8"
+	# Collation order.
+        #export LC_COLLATE="en_us.utf8"
+        export LC_COLLATE="C"
+	# Monetary formats.
+        export LC_MONETARY="en_us.utf8"
+	# formats of informative and diagnostic messages and interactive responses.
+        export LC_MESSAGES="en_us.utf8"
+	# Paper size format.
+        export LC_PAPER="en_us.utf8"
+	# Define format of names.
+        export LC_NAME="en_us.utf8"
+	# Format of addresses.
+        export LC_ADDRESS="en_us.utf8"
+	# Format of telephon numbers.
+        export LC_TELEPHONE="en_us.utf8"
+	# Format of dimensions.
+        export LC_MEASUREMENT="en_us.utf8"
+	# Identify locale informations.
+        export LC_IDENTIFICATION="en_us.utf8"
+else
+        export LC_ALL=POSIX
+fi
+

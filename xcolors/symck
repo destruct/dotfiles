@@ -1,0 +1,32 @@
+! Black
+URxvt.color0: #000000
+! Red
+URxvt.color1: #C75646
+! Green
+URxvt.color2: #8EB33B
+! Yellow
+URxvt.color3: #D0B03C
+! Blue
+URxvt.color4: #72B3CC
+! Purple
+URxvt.color5: #C8A0D1
+! Cyan
+URxvt.color6: #218693
+! White
+URxvt.color7: #B0B0B0
+! Grey
+URxvt.color8: #5D5D5D
+! Light Red
+URxvt.color9: #E09690
+! Light Green
+URxvt.color10: #CDEE69
+! Light Yellow
+URxvt.color11: #FFE377
+! Light Blue
+URxvt.color12: #9CD9F0
+! Light Purple    
+URxvt.color13: #FBB1F9
+! Light Cyan
+URxvt.color14: #77DFD8
+! Light white
+URxvt.color15: #F8F8F8

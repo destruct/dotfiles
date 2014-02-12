@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+# often visited directory
+hash -d D=~/downloads
+hash -d Z=~/.zsh
+hash -d B=/files
+hash -d DO=/backup/Documents
+hash -d F=~/films
+hash -d SR=/usr/src
+hash -d P=/usr/ports
+hash -d PJ=~/projects
+hash -d I=~/.irssi/
+hash -d VL=/var/log
+hash -d RC=/etc/rc.d
+hash -d M=/etc/minit
+hash -d V=~/.vim
+hash -d T=~/torrents
