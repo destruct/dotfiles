@@ -1,15 +1,12 @@
+#/bin/sh
+export LANG=en_US.UTF-8
 source ~/.fehbg &
-
-conky &
-#conky -c ~/.conkyrc_song &
-#conky -c ~/.conkyrc_clock &
-xset +fp $HOME/.fonts &
-#xscreensaver &
-lal &
-
-aplay ~/.opening_theme.wav &
-urxvtd -q -o -f &
-
-exec openbox
+xset fp+ $HOME/.fonts 
+xset fp rehash 
+xrdb -merge $HOME/.Xresources &
+xmodmap $HOME/.Xmodmap & 
+xsetroot -cursor_name left_ptr &
+urxvtd -f -q -o &
 
 
+exec herbstluftwm 
