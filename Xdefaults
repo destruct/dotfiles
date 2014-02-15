@@ -1,6 +1,6 @@
 #include "/home/musti/configs/xcolors/sicp"
 
-urxvt*imLocale:         en_us.utf8
+!urxvt*imLocale:         en_US.utf8
 urxvt*geometry:         105x30
 urxvt*depth:            24
 urxvt*transparent:      true
