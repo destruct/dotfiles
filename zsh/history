@@ -1,297 +1,3 @@
-sudo glib-compile-schemas /usr/share/glib-2.0/schemas
-cp /tmp/Adele\ -\ Someone\ Like\ You\ \(Live\ at\ The\ Royal\ Albert\ Hall\).mp3 music/misc
-run-help glib-compile-schemas
-cd devel/ports/vim
-strace -p 24818
-sudo prt-cache remove fetchmail
-sudo prt-cache remove nfs-utils
-prt-cache search mplayer
-prt-cache search xbase
-prt-cache search unrar
-sudo prt-cache depinst unrar
-prt-cache info unrar
-unrar x Angewandte.Kryptographie.N.rar
-mupdf A
-mupdf Angewandte\ Kryptographie\ \(4.\ Auflage\).pdf
-cp -r st /tmp
-/tmp/st
-less ~/.Xdefaults
-cp -r ~/devel/st /tmp
-prt-cache wxgtk
-prt-cache search wxgtk
-mkdir xchm
-cd xchm
-wget http://home.cc.umanitoba.ca/~fonsecah/crux/ports//xchm/Pkgfile
-prt-cache search xchm
-sudo prt-cach depends xchm
-mkdir chmlib
-wget -P chmlib http://home.cc.umanitoba.ca/~fonsecah/crux/ports/chmlib/Pkgfile
-sudo prt-cache depends xchm
-sudp prt-cache depinst xchm
-sudo prt-cache depinst xchm
-less /usr/include/sys/mman.h
-man mmap64
-sudo prt-cache depends pidgin
-man mmap
-mupdf ~/documents/Rootkit.pdf
-mupdf ~/documents/the_shellcoders_handbook.pdf
-cjav
-git clone git://github.com/Laurelai/decompile-dump.git
-cd decompile-dump
-cd output
-grep -iR main .
-lesspipe.sh STUXNET.RAR
-wget http://www.welivesecurity.com/wp-content/uploads/2013/04/dump_cdorked_config.7z
-prt-cache search 7zip
-lesspipe.sh passwdqc-1.3.0.tar.gz
-unrar x plugtmp
-unrar x passwdqc-1.3.0.tar.gz
-tar xfz passwdqc-1.3.0.tar.gz
-cd passwdqc-1.3.0
-less passwdqc.h
-less pwqcheck.c
-sudo prt-cache update alsa-lib util-linux man-pages alsa-utils
-prt-cache readme alsa-utils
-sudo prt-cache update libxml2 less pciutils getmail
-sudo prt-cache update msmtp iproute2
-prt-cache info harfbuzz
-less minit.h
-grep -ir typedef .
-less hard-reboot.
-less hard-reboot.c
-less t.c
-less write_proc.c
-less split.c
-grep -ir sync .
-man sync
-man 2 sync
-less serdo.
-less serdo.c
-prt-cache search fgetty
-prt-cache readme fgetty
-prt-cache depinst fgetty
-prt-cache depends fgetty
-prt-cache search portspage
-prt-cache search ports
-https://raw.github.com/crshd/portspage-markdown/master/portspage-markdown
-wget https://raw.github.com/crshd/portspage-markdown/master/portspage-markdown
-chmod u+x portspage-markdown
-./portspage-markdown --title=zaubzas ports --path ~/devel/ports
-./portspage-markdown
-dmesg | grep -i mic
-sudo make modules_insall
-./portspage-markdown --title=zabuzas ports --path ~/devel/ports
-cd /lib/udev/
-less rule_generator.functions
-vim rule_generator.functions
-grep -iR sysfs /proc/config.gz
-zcat /proc/config.gz| grep -i sys
-zcat /proc/config.gz| grep -i sysfs
-sudo insmod /lib/modules/3.8.7-ck1/extra/nvidia.ko
-sudo zcat /proc/config.gz | grep -i unix
-cd linux-3.8.7-ck
-feh --bg-scale tmp/03140_empireofthelights_1920x1080.jpg
-ll /dev/mapper/control
-dmesg | grep -i bfs
-ll /dev
-tar xfj deadbeef-0.5.6.tar.bz2
-cd deadbeef-0.5.6
-du --si /boot/vmlinuz-3.*
-/tmp/deadbeef-0.5.6/./deadbeef
-du --si /lib/modules/3.*
-sudo du --si /lib/modules/3.*
-cat /proc/schedstat
-cat /proc/scsi/device_info
-vmstat
-cat /proc/vmallocinfo
-sudo cat /proc/vmallocinfo
-prt-cache search ntpdate
-prt-cache info ntp
-cd /usr/ports/contrib/ntp
-cat ntp-64bit.diff
-cat ntpd
-date -s "29 APR 2013 13:13:00"
-sudo date -s "29 APR 2013 13:13:00"
-prt-cache depends openntpd
-prt-cache search pam
-prt-cache readme linux-pam
-prt-cache cat fgetty
-run-help portspage
-which-command portspage
-run-help prt-cache
-pkginfo -o /usr/bin/portspage
-file /usr/bin/portspage
-less /usr/bin/portspage
-run-help httpup
-run-help httpup-repgen
-httpup http://destruct.de.ohost.de/crux/ports/ ports
-httpup sync http://destruct.de.ohost.de/crux/ports/ ports
-rm -r libgnomecanvas
-rm -r gtkpod
-rm -r libgpod
-prt-cache search getmail
-prt-cache info getmail
-rm -r getmail
-rm -r elfutils
-cat nessus-core/Pkgfile
-rm -r nessus-*
-cat ../dietlibc/Pkgfile
-rm -r audacious
-rm -r audacious-plugins/
-cat hotplug-ng/Pkgfile
-rm -r hotplug-ng
-prt-cache info nmap
-prt-cache info dsniff
-cd mini
-cat smplayer
-cat smplayer/Pkgfile
-prt-cache search startup
-rm -r startup-notification
-cat amap
-cat amap/
-cd amap
-prt-cache info feh
-rm -r libmowgli
-grep -ir sqlite .
-rm -r framework
-rm -r sqlite3
-grep -ir stfl .
-grep -ir libnet
-prt-cache info hddtemp
-rm -r hddtemp
-cp /var/cache/pkgmk/sources/dietlibc-0.33.tar.bz2 ..
-sudo cp /var/cache/pkgmk/sources/dietlibc-0.33.tar.bz2 ..
-sudo chown musti:users dietlibc-0.33.tar.bz2
-make dyn
-grep -ir dyn .
-grep -ir gd .
-rm -r ntop
-rm -r gd
-grep -ir deprecated .
-prt-cache info msmtp
-rm -r msmtp
-cd slock
-../weex
-cat formatstring.patch
-prt-cache info fgetty
-vim chmlib
-prtverify ~/tmp/ports/amap/
-prtverify ~/tmp/ports/dietlibc
-pkginfo -o /usr/include/stdio.h
-find /usr/include -iname stdarg
-find /usr/include -iname stdarg.h
-less /usr/include/c++/4.7.2/tr1/stdarg.h
-man va_copy
-less /usr/lib/gcc/x86_64-unknown-linux-gnu/4.7.2/finclude
-find / -iname stdarg.h
-less /usr/lib/gcc/x86_64-unknown-linux-gnu/
-less /usr/lib/gcc/x86_64-unknown-linux-gnu/4.7.2/include/stdarg.h
-mupdf documents/Advanced\ Programming\ In\ The\ UNIX\ Environment,\ 2nd\ Edition\ \(2005\).chm
-cp /var/cache/pkgmk/sources/weex-2.6.1.5.tar.gz
-cp /var/cache/pkgmk/sources/weex-2.6.1.5.tar.gz .
-tar xfz weex-2.6.1.5.tar.gz
-cd weex-2.6.1.5
-vim src/strlib.c
-less ../weex-valist-arg-mismatch.patch
-vim ftplib.h
-vim ftplib.c
-vim weex.c
-l ~/documents
-less filedata.c
-less ftplib.h
-grep -i main ftpmain.c
-less ftpmain.c
-sudo prt-get info fgetty
-prt-cache cat dietlibc
-cd dietlibc
-cat ../fgetty/Pkgfile
-vim ../fgetty/Pkgfile
-../fgetty
-sudo pkgadd /var/cache/pkgmk/packages/dietlibc\#0.33-1.pkg.tar.gz
-man fgetty
-less parsecfg.h
-less parsecfg.c
-less intl.h
-less shhopt.h
-less shhopt.c
-ps aux | grep -i getty
-date -s "07:35
-ls -l /usr/share/zoneinfo/Europe/Berlin
-sudo rm /etc/localtime
-sudo ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-sudo date -s "07:42"
-mupdf /tmp/Sixt-RES-1625176569.pdf
-apm
-zcat /proc/config.gz| grpe apm
-zcat /proc/config.gz| grep -i cpi
-prt-cache readme openntpd
-less /etc/ntpd.conf
-sudo vim /etc/ntpd.conf
-cat /etc/re
-sudo ntpd
-date -s "07:35"
-sudo date -s "07:35"
-sudo /etc/rc.d/ntpd restart
-//
-git clone git://github.com/libusbx/libusbx.git
-grep -ir "int main" .
-sudo prt-cache update zlib unrar dgb gcc git
-sudo prt-cache update gdb
-ll /usr/include/gnu/stubs.h
-find / -iname stubs
-find / -iname stubs 2>
-find / -iname stubs 2>&
-find / -iname stubs 2>&1
-find / -iname stubs 2>&1/dev/null
-find / -iname stubs 2>/dev/null
-prt-cache depends gcc
-prt-cache fsearch stubs-32
-prt-cache search glibc
-less /usr/ports/core/glibc-32/.footprint
-../glibc-32
-cd glibc
-glibc-32
-prt-cache fsearch stub-32
-prt-cache fsearch stub-32/j
-prt-cache fsearch stub-32.h
-prt-cache fsearch stub*
-prt-get fsearch stubs.h
-prt-get fsearch stubs-32.h
-prt-cache fsearch stubs-32.h
-cp -r /usr/ports/core/gcc .
-whois
-prt-cache depinst whois
-sudo prt-cache depinst whois
-whois strcat.de
-cd .icedtea
-prt-cache info irssi
-prt-cache search weechat
-../configs
-portspage -h
-portspage --help
-portspage --title=zabuzas ports .
-cd rxvt-unicode
-rm *tar
-rm *tar*
-xlsfonts | grep -i monte
-sudo vim /etc/hosts
-rm ~/.irssi/logs/*
-rm -r ~/.irssi/logs/*
-scp -r musti@haku:/home/musti/musti/.irssi ~
-scp -r musti@haku:/home/musti/musti/.weexrc ~/
-ncftp -u destruct ftp://destruct.de.ohost.de/
-scp -r musti@haku:/home/musti/documents ~/documents
-cd cv
-cd chess
-rm -r chess
-cd texte
-../computer
-mupdf ~/documents/documents/Oelschwindel.pdf
-lesspipe.sh MonteCarlo-PCF.tgz
-cp MonteCarlo-PCF/MonteCarlo* ~/.fonts
-xlsfonts | grep -i pro
-urxvt -fn -windows-montecarlo-bold-r-normal--0-0-72-72-c-0-microsoft-cp1252
-urxvt -fn -windows-montecarlo-bold-r-normal--11-110-72-72-c-60-microsoft-cp1252
 vim ../.weexrc
 xlsfonts| grep -i monte
 urxvt -fn -windows-montecarlo-medium-r-normal--0-0-72-72-c-0-microsoft-cp1252
@@ -340,7 +46,6 @@ cp -r ports/rxvt-unicode ports_own
 rm -r rxvt-unicode
 cat ncftp
 cat ncftp/Pkgfile
-cd jin
 rm /var/cache/pkgmk/sources/jin-2.14.1.tar.xzjin-2.14.1.tar.xz.partial
 sudo rm /var/cache/pkgmk/sources/jin-2.14.1.tar.xzjin-2.14.1.tar.xz.partial
 cat herbstluftwm/Pkgfile
@@ -420,7 +125,6 @@ hostname -f
 cat /proc/consoles
 vim libtorrent/Pkgfile
 cat libtorrent/Pkgfile
-cat .fo
 portspage --title=zabuzas ports . >> test.html
 portspage --title=zabuza's ports . >> test.html
 portspage --title=zabuza\'s ports . >> test.html
@@ -1146,7 +850,6 @@ rm -r Remember.Me.PS3-DUPLEX
 mupdf documents/Microsoft_2008_pki.pdf
 unzip archive.zip
 cp DSC_001* ~/images/meine_gsxr
-git diff
 git diff v0.5.1 origin/master
 git diff master FETCH_HEAD
 git diff master origin/master
@@ -1689,13 +1392,10 @@ grep -nE 'XXX|TODO' st.c
 grep -iR xdefaults .
 grep -ir worddelimiters
 rm -r st
-rm -rf st
-git clone http://git.suckless.org/st
 toe
 man toe
 TERM=rxvt-unicode-256color
 man tic
-vim st.c
 less ~/.terminfo
 less ~/.terminfo/s/st
 wc-l st.c
@@ -1835,7 +1535,6 @@ mupdf Network\ Security\ with\ OpenSSL\ \[OReilly\'2002\'0-596-00270-X\].pdf
 mupdf Rootkit.pdf
 run-help man
 less /usr/include/tirpc/rpc/xdr.h
-cd /usr/ports/opt/firefox-java-plugin
 cd /usr/lib/java/jre/lib
 cd amd64
 ls -l libnpjp2.so
@@ -1932,7 +1631,6 @@ xlsfonts | grep -i tix
 grep -ir "could not" .
 grep -nir "could not" .
 rm -rf bar
-vim config.def.h
 sh panel_bar | ./bar
 git clone https://github.com/LemonBoy/bar.git
 prt-cache search xcb
@@ -1959,11 +1657,8 @@ cd snapwm-stable
 wget https://raw.github.com/baskerville/bspwm/master/examples/panel/panel_bar
 rm panel_bar
 prt-cache fsearch arp
-ls -d
 grep -ir safe_strncpy .
 vim alias
-echo $OS
-alias | grep -i grep
 grep -ir --color=always safe_strncpy .
 less lib/util.h
 grep -ir --color=always safe_strncpy lib
@@ -2253,7 +1948,6 @@ cawt modules.alias
 cat modules.alias
 grep -ir version .
 cat ~/.xsel.log
-run-help xsel
 xsel -o
 man bool
 man -k bool
@@ -2712,9 +2406,6 @@ urxvt -fn "xft:Cousine:style=Regular"
 wget -P ~/.vim/colors https://raw.github.com/c00kiemon5ter/vim/master/colors/molokookies.vim
 urxvt -fn "xft:xft:Consolas:pixelsize=12 "
 urxvt -fn "xft:xft:Consolas:pixelsize=10 "
-wget https://raw.github.com/chriskempson/base16-xresources/master/base16-default.dark.xresources
-rm base16-default.dark.xresources
-wget https://raw.github.com/chriskempson/base16-xresources/master/base16-solarized.dark.xresources
 rm base16-solarized.dark.xresources
 wget https://raw.github.com/chriskempson/base16-xresources/master/base16-monokai.dark.xresources
 wget -P .vim/colors https://raw.github.com/chriskempson/base16-vim/master/colors/base16-monokai.vim
@@ -2790,7 +2481,6 @@ grep -ir previous ~/.config/herbstluftwm/
 rm -i fgetty-0.7.tar.bz2
 od -t\?
 od -t\.
-less FAQ
 ls -l configs/xcolors/base16-monokai.dark.xresources
 vim arg.h
 prt-cache isinst glib
@@ -2874,11 +2564,9 @@ vim /etc/rc.conf
 cd /usr/share/kbd/unimaps
 find / -iname "en_US*" / 2>/dev/null
 find / -name "en_US*" / 2>/dev/null
-cat locale-archive
 file locale-archive
 cd /usr/share/i18n
 cd locales
-less en_US
 grep -r term
 grep -ir urxvt .
 grep -ir rxvt .
@@ -3349,7 +3037,6 @@ grep -ir fb /etc/udev
 sudo ls -l /dev/fb
 grep -ir "/dev/fb" /var/log/Xorg.0.log
 grep -ir "/dev/fb" /var/log/Xorg.0.log*
-vim bin/vimpager
 run-help tput
 killall vimpager
 kill 11718
@@ -3357,9 +3044,6 @@ kill 12066
 man vim
 kill 12312
 kill 12422
-rm vimpager
-wget https://raw.github.com/rkitover/vimpager/master/vimpager
-chmod u+x vimpager
 ./vimpager
 kill 12733
 kill 12425
@@ -3533,7 +3217,6 @@ less db.backup
 less rejected
 sudo pkgrm hwinfo
 sudo pkgrm libx86emu
-cd st
 suod prt-cache update tar
 sudo prt-cache xorg-server
 sudo prt-cache update xorg-server
@@ -3688,7 +3371,6 @@ less /usr/ports/contrib/openvpn/.footprint
 mupdf-x11 /tmp/PP_FamFin_extra_UniCreditCard_DE_1211.pdf
 source ./zsh-syntax-highlighting.zsh
 cp -r zsh-syntax-highlighting .zsh
-rm -r zsh-syntax-highlighting
 rm -r zsh-syntax-highlighting -f
 rm .zsh-update
 rm .zsh_history
@@ -3829,7 +3511,6 @@ pkginfo -i | grep -i geeqie
 pkginfo -I
 cd documents/assembler
 mupdf No.Starch.Press.The.Art.of.Assembly.Language.2nd.Edition.Mar.2010_.pdf
-ls -l configs/xcolors
 vim devel/herbstluftwm/src/command.c
 vim devel/herbstluftwm/src/main.c
 pkginfo -i | grep -i mpv
@@ -3989,7 +3670,6 @@ tar xf seatools_cli.tar
 lesspipe.sh seatools_cli.tar
 less st
 file st
-./st
 less sthelp.txt
 prt-cache search sea
 man size_t
@@ -4126,7 +3806,6 @@ cat /etc/rc.d/ldm
 vim ldm
 touch ldm.conf
 vim ldm.
-run-help install
 vim ldm.conf
 less /etc/ldm.conf
 cd devel/ports/ldm-git
@@ -4368,7 +4047,6 @@ vim hostname.c
 man ctags
 wc -l route.c
 gcc route.c
-C --pre/u
 ./configure.sh
 make config
 which-command route
@@ -4731,7 +4409,6 @@ cd audacious-3.4
 /tmp/audacious-3.4/./src/audacious/audacious
 cd bin/d
 prt-cache depends audacious
-cd /usr/ports/opt/dbus
 sudo prt-cache upate gcc
 prt-cache fsearch /usr/lib/libstdc++.so.6.0.18-gdb.py
 file /usr/lib/libstdc++.so.6.0.18-gdb.py
@@ -4744,7 +4421,6 @@ ls -l .xinitrc
 svn up
 rm dstufft.zsh-theme
 cat c
-cat ctl
 cat comp
 cat export
 less logout
@@ -4818,8 +4494,6 @@ cd mutt
 for x in .*; do mv $x ${x/./}; done
 mv git .git
 mv gitignore .gitignore
-cd .git
-git push origin master
 ls -l .gitignore
 cat .gitignore
 ssh gist@github.com
@@ -4835,17 +4509,12 @@ ssh-add id_rsa
 ssh -vT git@github.com
 cat id_rsa
 cat id_rsa.pub
-cd configs
-git push
 tig
 prt-cache search tig
 prt-cache info tig
-np
 cd /tmp/audacious-3.4
 less ~/devel/ports/audacious/.footprint
 prt-cache fseach audtool
-prt-cache fsearch audtool
-cd src/audtool
 prt-cache isinst dbus-glib
 ls -l .*
 cat Xdefaults
@@ -4891,7 +4560,6 @@ man inet_pton
 cat a
 sudo prt-cache sy~
 sudo prt-cache update xorg-libpixman nspr pciutils python nss pango
-rm test.html
 portspage --title=zabuza\'s\ ports . >> test.html
 whois fefe.de
 host fefe.de
@@ -4955,7 +4623,6 @@ ps ax -o pid,ppid,stat,tty,wchar
 ps ax -o pid,ppid,stat,tty,wchan
 man socket
 touch erosionedit
-xrdb -remove ~/.Xresources
 ls -l erosionedit
 vim erosionedit
 lsd misc
@@ -5044,7 +4711,6 @@ file firefox
 rm -r firefox
 sudo cp firefox-25.0.1.tar.bz2 /var/cache/pkgmk/sources
 mv firefox firefox-bin
-cd firefox-bin
 diff -u .footprint /usr/ports/opt/firefox/.footprint
 sudo pkgrm firefox-bin
 sudo pkgrm firefox
@@ -5087,7 +4753,6 @@ echo $ZSH_HIGHLIGHT_PATTERNS
 cd highlighters
 cd main
 less ../brackets/README.md
-vim ~/.zshrc
 echo $ZSH_HIGHLIGHT_STYLES
 echo $ZSH_HIGHLIGHT_HIGHLIGHTERS
 ls -l /usr/bin/[
@@ -5096,7 +4761,6 @@ cd minit
 prt-cache search dbus
 cd /usr/ports/opt/dbus-glib
 ./firefox
-sudo prt-cache depends dbus-glib
 prt-cache info dbus-blig
 prt-cache info dbus-glib
 prt-cache dependent dbus-glib
@@ -5236,7 +4900,6 @@ cd /etc/sv/
 cat dhcpcd/run
 cat syslogd
 sv status dhcpcd
-less /etc/rc.conf
 sudo mkdir slim
 cp ../dhcpcd/run .
 cat syslogd/run
@@ -5343,7 +5006,6 @@ ls -l /usr/sbin/alsac
 ls -l /usr/sbin/ntpd
 sudo pkginfo -o /usr/sbin/ntpd
 getent group ntp
-less post-install
 cd /usr/src/linux-3.10/Documentation
 cd devel/ports_own/../ports
 cd /usr/src/linux-3.10/Documentation/fb
@@ -5356,7 +5018,6 @@ less Documentation/fb/vesafb.txt
 less Documentation/fb/vesafb.tx
 less Documentation/fb/vesafb.t
 less Documentation/svga.txt
-sudo make
 cd /etc/default
 less grub
 sudo killall ntpd
@@ -5376,7 +5037,6 @@ sudo pkgmk -r
 find /dev -name fb0
 sudo mknod /dev/fb0 c 29 0
 sudo pkgrm xorg-xf86-video-fbdev
-sudo make -j4
 sudo cp arch/x86/boot/bzImage /boot/vmlinuz-3.10-ck1
 cp System.map /boot/System.map-3.10-ck1
 sudo cp System.map /boot/System.map-3.10-ck1
@@ -5570,7 +5230,6 @@ zcat /proc/config.gz| grep -i pci | less
 touch hisham
 vim hisham
 ls -l downloads
-lsd
 ls -ld *(/)
 ls -ld (/)
 ls -ld .(/)
@@ -6124,10 +5783,8 @@ bspc config top_padding 15
 mv config.h config.h_orig
 wget https://raw.github.com/windelicato/dotfiles/master/scripts/bar/config.h
 cat config.h_orig
-cd devel/ports_own/vim
 less /usr/ports/core/vim/Pkgfile
 vim -v
-vim config.h
 less ~/devel/bar/config.h_orig
 cp bar ~/bin
 cat ~/.fehbg
@@ -6301,7 +5958,6 @@ less sock.h
 less buffers.c
 less /usr/include/sys/socket.h
 less /usr/include/stdint.h
-cd /usr/include
 less bits/socket.h
 grep -ir socklen_t
 grep -ir socklen_t .
@@ -6492,7 +6148,6 @@ git clone git://git.code.sf.net/p/zsh/code zsh
 cd /usr/ports/core/pkgutils
 grep -i mustafa ChangeLog
 grep -i oezkan ChangeLog
-grep -ir mustafa .
 zle -N '^t' quote-and-complete-word
 bindkey '^t' quote-and-complete-word
 kill -9 1569
@@ -6513,7 +6168,6 @@ zle -
 zle
 autoload
 autoload | grep -i modify
-cat prompt
 cat prompt2
 cat git
 autoload -U modify-current-argument
@@ -6539,7 +6193,6 @@ bindkey '\t' quote-and-complete-word
 bindkey '^[d' quote-and-complete-word
 cd /usr/share/zsh/functions/Completion/X
 ../5.0.2/functions/Zle
-cat binds
 less quote-and-complete-word
 cd /usr/src/linux-3.12/arch/x86
 less kernel/entry_64.S
@@ -6598,7 +6251,6 @@ prt-cache search gcore
 zcat /proc/config.gz| grep -i core
 less core.info
 gdb core_pattern_pipe_test
-q
 sleep 100
 prt-cache gcore
 prt-cache fsearch gcore
@@ -6800,7 +6452,6 @@ pkginfo -i | grep -i curs
 C --prefix=/usr --with-term-lib='ncursesw'
 linux
 less /usr/ports/core/ncurses/.footprint
-less config.log
 ls -l /usr/include/ncurses.h
 rm config.log
 C --prefix=/usr --with-term-lib='ncurses' --enable-largefile
@@ -7068,7 +6719,6 @@ mupdf GNU_Linux_Application_Programming_2ndEdition.pdf
 prt-cache search glass
 cp /tmp/GNU_Linux_Application_Programming_2ndEdition.pdf ~/documents/linux_programming
 cd devel/smdev
-../bar
 cd linux-2.6
 less /proc/sys/kernel/hotplug
 cat /proc/sys/kernel/hotplug
@@ -7118,7 +6768,6 @@ cd minutils
 less s6-mount.c
 vim s6-devd.c
 cd /tmp/prog/skalibs-1.4.2/etc
-../src
 cd libstddjb
 less tai.h
 less taia_add.c
@@ -7166,7 +6815,6 @@ vim bla.txt
 wget -P ~/.vim/colors http://git.z3bra.org/cgit.cgi/dotfiles/plain/vim/colors/shblah.vim
 rm ~/.vim/colors http://git.z3bra.org/cgit.cgi/dotfiles/plain/vim/colors/shblah.vim
 rm ~/.vim/colors/shblah.vim
-ps ax | grep -i dbus
 cd /usr/lib/at-spi2
 pkginfo -o at-spi2-registryd
 prt-cache info at-spi2-core
@@ -7200,7 +6848,6 @@ prt-cache dependent at-spi2-core
 prt-cache dependent at-spi2-core --path
 prt-cache dependent at-spi2-atk
 cd /usr/ports/opt/at-spi2-atk
-ps ax | grep -i X
 man X
 Xorg
 ls -l /usr/bin/X
@@ -7378,13 +7025,11 @@ man umask
 umask
 umask -S
 grep -ir umask ~/.zsh
-vim .zsh/export
 id -u
 less /tmp/aha
 ls -l bin/panel
 ls -l /tmp
 ls -l /
-ls -al
 ls -l .Xresources
 less .vim/plugin/signature.vim
 less .vim/autoload/signature.vim
@@ -7410,7 +7055,6 @@ less README-TOOLS
 vim p0f-client.c
 cp -r p0f-3.06b ~/devel
 cd ../bspwm
-cd zsh
 ../sres
 cd ldm
 cd messagebus
@@ -7424,16 +7068,13 @@ kill -9 16610
 kill -9 16920
 kill 17080
 kill -9 17080
-less buildsys.mk
 gdb auacious
-gdb audacious
 kill -9 21823
 kill -9 21825
 cd src/libaudcore
 less tinylock.h.in
 cp tinylock.h.in tinylock.h
 rm tinylock.h
-make distclean
 ./autogen.sh
 C --prefix=/usr --disable-nls --mandir=/usr/man
 rm config.h.in\~
@@ -7443,7 +7084,6 @@ cd src/audacious
 find . libaudcore
 cd libaudcore
 export LD_PRELOAD=/home/musti/devel/audacious/src/libaudcore
-gdb src/audacious/audacious
 export LD_PRELOAD=src/libaudcore/libaudcore.so
 export LD_PRELOAD=src/libaudgui/libaudgui.so
 export LD_PRELOAD=src/libaudgui/libaudgui.so:src/libaudcore/libaudcore.so
@@ -7546,7 +7186,6 @@ ls -d 18\ -\ Ayda\ Mosharraf\ -\ Guellerin\ Icinde\ \(Mfo\ Cover\).mp3| hexdump 
 ls -d Ayda\ Mosharraf\ -\ Full\ Albüm | hexdump -C
 mv Ayda\ Mosharraf\ -\ Full\ Albüm Ayda\ Mosharraf\ -\ Full\ Albuem
 ls -d Ayda\ Mosharraf\ -\ Full\ Albuem | hexdump -C
-rame
 cp -r Ayda_Mosharraf_-_Full_Albuem ~/music
 prt-cache info mpv
 cd /usr/ports/contrib
@@ -7579,7 +7218,6 @@ git show e43d5e6a235319c0b042b33558281a3589380d05
 git show f1a518523a62ee0507022132c53a96ca1fdf41b7
 kill -9 18358
 cd .config/x
-cd configs/
 cd xcolors
 mv base16-monokai.dark.xresources base16-monokai.dark
 touch baskerville-ivorylight
@@ -7602,11 +7240,9 @@ mv coplan copland
 vim copland
 man snprintf
 mupdf /tmp/n1093.pdf
-kill -9 audacious
 kill -9 29115
 grep -ir strlcpy .
 vim src/libaudtag/id3/id3v24.c
-C --prefix=/usr
 C --prefix=/usr --disable-nls
 ../linux-2.6
 ls -l ~/tmp/*mp3
@@ -7616,7 +7252,6 @@ find ~/tmp -name "*polat*"
 mv SanalAlemci.com-Polat-Zil-sesi.MP3 Polat-Zil-sesi.mp3
 mpv Polat-Zil-sesi.mp3
 cp Polat-Zil-sesi.mp3 ~/tmp
-T
 rm U9200_EmotionUI_1.6_V100R001CHNC00B705.zip
 cd dload
 rm -r dload
@@ -7719,7 +7354,6 @@ rm -r after
 cd perl
 rm -r ftplugin
 less tex.vim
-cd /usr/share/vim
 cd ftplugin
 ../p
 ../print
@@ -7785,7 +7419,6 @@ vim ~/.config/bspwm/bspwmrc
 rm .panel.log
 bar
 whereis bar
-echo $PATH
 man slim.conf
 man slim
 cd lsim
@@ -7838,7 +7471,6 @@ cat rainbow.vim
 less rainbow.vim
 less ~/.viminfo
 cd -6
-cd devel/ports/audacious
 sudo pkgmk 0d
 ../audacious-plugins
 kill -9 26434
@@ -7893,13 +7525,10 @@ vim aha.c
 less /usr/share/vim/syntax/mail.vim
 less /usr/share/vim/syntax/c.vim
 grep -ir cinoption /usr/share/vim
-export DISPLAY=:0
 killall sxhkd
 strace -f -o /tmp/sxhkd.strace sxhkd
 vim /tmp/sxhkd.strace
-echo $DISPLAY
 grep -i socket sxhkd.strace
-cd /usr/ports/contrib/sxhkd
 git clone https://github.com/baskerville/sxhkd.git
 cd sxhkd
 grep -ir bspwm .
@@ -7932,11 +7561,9 @@ vim bin/DeepShredder11/fics.pgn
 cd devel/ports_own/zsh
 zs
 cd .zsh/zsh-syntax-highlighting
-rm -rf zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ls -l zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 cd zsh-syntax-highlighting
-vim ../.zshrc
 du --si Breaking_Benjamin
 cd Breaking_Benjamin
 cd Breaking_Benjamin_-_Benjamin_Broken_Vol._1_\(Bootle_\(2009\)
@@ -8101,7 +7728,6 @@ last -x
 ps ax | grep -isx
 python backdoorolol.py --ip 192.168.0.1 --print_conf
 less .panel.log
-less .Xresources
 /mtp
 tar xfz MonteCarlo-PCF.tgz
 cd MonteCarlo-PCF
@@ -8134,7 +7760,6 @@ xls fonts| grep -i u
 xlsfonts| grep -i u
 xlsfonts| grep -i uu
 urxvt -fn -benis-uushi-medium-r-normal--11-90-75-75-p-58-iso10646-1
-vim bin/audiotag
 sudo prt-cache update sudo libdrm dhcpcd
 kill -9 29375
 sudo prt-cache search pulse
@@ -8166,13 +7791,11 @@ lesspipe.sh data.tar.gz
 ar xfz data.tar.gz
 tar xfz data.tar.gz
 cd usr
-./steam
 cd share
 ../lib
 cd steam
 lesspipe.sh bootstraplinux_ubuntu12_32.tar.xz
 autoload zcalc
-zcalc
 xset q
 xcal -m -3
 prt-cache fsearch xcalc
@@ -8210,7 +7833,6 @@ prt-cache fsearch alsaplayer
 wget http://alsaplayer.sourceforge.net/alsaplayer-0.99.81.tar.bz2
 tar xfj alsaplayer-0.99.81.tar.bz2
 cd alsaplayer-0.99.81
-C --prefix=/usr/ --disable-nls
 cd sr
 cd alsaplayer
 cd app
@@ -8232,7 +7854,6 @@ gi tpull
 git show 4cd4de0138998c2cd3d368e34f47722a5d09631c
 xlsfonts| grep -i mont
 mkfontdir .
-urxvt
 kill -9 1031
 grep -i pad .config/bspwm/bspwmrc
 mpv torrents/2nd.Barca.vs.Milan.\[54.91\].mkv
@@ -8310,7 +7931,6 @@ man strdup
 man strcat
 sudo prt-cache update jdk libdrm libpcap
 sudo prt-cache update jdk
-cd /usr/ports/opt/jdk
 sudo cp /tmp/jdk-7u51-linux-x64.tar.gz /var/cache/pkgmk/sources
 sudo pkgmk -
 jav
@@ -8361,7 +7981,6 @@ mplayer ~/torrents/1st.Barca.vs.Milan.\[4.38\].mkv
 mpv ~/torrents/1st.Barca.vs.Milan.\[4.38\].mkv
 mpv ~/torrents/Beyonce\ Beyonce\ 2013/02\ Haunted.mp3
 cat ~/.asoundrc_back
-cd devel/audacious
 less /tmp/rdesktop.patch
 prt-cache search ranger
 prt-cache info ranger
@@ -8388,7 +8007,6 @@ sudo prt-cache remove tint2
 rm .tint2rc
 ../mpv
 cd ../net-tools
-../smdev
 ../sx
 ../st
 cd bspwm
@@ -8445,7 +8063,6 @@ script
 less typescript
 rm typescript
 run-help urxvtc
-urxvtc
 ps ax |grep -i urx
 vim .config/bspwm/bspwmrc
 vim .config/sxhkd
@@ -8662,7 +8279,6 @@ tar xfj vim-7.4.tar.bz2
 cd vim74
 grep -ir ptmx .
 cd devel/bspwm
-cd audacious
 grep -ir pts
 grep -ir "/dev/pts"
 grep -ir "/dev/pts" .
@@ -8845,7 +8461,6 @@ cat /proc/32665/status
 cat restartpanels.sh
 cd devel/ports/herbstluftwm
 ls -l /usr/share/zsh/functions/Completion/X/_herbstclient
-...
 ls -l /usr/share/zsh/functions/Completion
 echo $fpath
 echo $fpath | grep -i site
@@ -8867,7 +8482,6 @@ ls -l site-functions
 pkginfo -o site-functions/_herbstclient
 hc
 cat site-functions/_herbstclient
-alias
 vim ~/tmp/learncode/ci
 vim ~/tmp/learncode/getmyhwaddr.c
 man opertor
@@ -8921,7 +8535,6 @@ msmtp --version
 mplayer ~/torrents/DiB-34452\ Maitresse\ Madeline\ and\ Garett\ Nova/DiB\ -\ Jan\ 15,\ 2014\ -\ Maitresse\ Madeline\ and\ Garett\ Nova\ \(34452\).mp4
 cat ~/.msmtprc
 less .md5sum
-cd -1
 grep -i tag hlwm-dzen2
 prt-cache depends steam
 hc remove 5
@@ -8993,7 +8606,6 @@ git clone https://github.com/Dieterbe/uzbl.git
 prt-cache search soup
 prt-cache search web
 git clone https://portix@bitbucket.org/portix/dwb.git
-prt-cache depends webkit
 prt-cache depends webkit >> ~/tmp/webkitdep.txt
 prt-cache depends libsoup
 prt-cache depends libsoup > ~/tmp/libsoupdep.txt
@@ -9040,7 +8652,6 @@ python
 vim config
 cd /usr/share/uzbl/examples
 cd config
-less config
 cd examples/config
 cd devel/uzbl
 cd examples/data/scripts
@@ -9084,7 +8695,6 @@ grep -ir pytho n.
 grep -ir python .
 find ./ -name '*.py') bin/*
 find ./ -name '*.py  bin/*
-cd -
 find ./ -name *.py bin/*
 $(find ./ -name '*.py') bin/*
 less uzbl-event-manager
@@ -9122,7 +8732,6 @@ ls -l /usr/lib/python2.7/site-packages/uzbl
 less /usr/lib/python2.7/site-packages/uzbl-201100808-py2.7.egg-info
 less /usr/bin/uzbl-event-manager
 uzbl/event_manager.py
-vim Makefile
 sudo rm /var/cache/pkgmk/packages/uzbl\#git-1.pkg.tar.gz
 sudo rm -rf /var/cache/pkgmk/sources/uzbl
 ls -l /usr/lib/python3.3/site-packages/uzbl
@@ -9135,7 +8744,6 @@ sudo prt-cache search gtk
 less /usr/ports/opt/pygtk/.footprint
 cd /usr/ports/opt/py
 cd /usr/ports/opt/pygtk
-less Pkgfile
 sudo prt-cache dependent python
 less /usr/ports/opt/pycairo/.footprint
 cd /usr/lib/python3.3/site-packages
@@ -9175,13 +8783,10 @@ sudo /usr/share/pygobject
 sudo rm -r /usr/share/pygobject
 prt-cache search json
 sudo prt-cache depinst json-c
-make clean
-make -j4
 ./dwb
 cd devel/po
 cp -r uzbl ../ports_own
 rm -r uzbl
-../ports_own
 mkdir dwb
 wget # Description: lightweight web browser based on the webkit
 # URL: https://portix.bitbucket.org/dwb/
@@ -9202,11 +8807,9 @@ sudo pkgrm dwb
 cat devel/ports_own/uzbl/Pkgfile
 sudo pkgmk -u,m
 cd /usr/share/man
-cd man
 cd man5
 ../man1
 pkginfo -o man
-run-help pkginfo
 pkginfo -o man/man1/bspc.1.gz
 sudo pkgrm bspwm
 pkginfo -o man/man1/ltrace.1.gz
@@ -9215,15 +8818,12 @@ lsudo pkgmk -d
 cd man/man1
 pkginfo -o /usr/bin/google-chrome-stable
 cd devel/ports_own/google-chrome
-less Makefile
 touch dotdev
 vim dotdev
 rm dotdev
-cd devel
 rm -rf uzbl
 cd udevil
 cd xcmenu
-../embutils
 cd libowfat
 cd net-tools
 ../musl
@@ -9346,7 +8946,6 @@ cd /usr/share/gir-1.0
 cd /usr/ports/opt/pango
 prt-cache fsearch Pango-1.0.gir
 cd ../atk
-less .footprint
 lesspipe.sh /var/cache/pkgmk/packages/atk\#2.8.0-1.pkg.tar.gz
 sudo prt-cache update gtk3
 sudo prt-cache update gtk3 --margs=-uf
@@ -9354,7 +8953,6 @@ cd ../dwb
 ../udevil
 ../net-tools
 zcat /proc/config.gz| grep -i ssd
-killall audacious
 killall -9 audacious
 run-help dwbem
 run-help dwbremote
@@ -9373,14 +8971,11 @@ touch taito
 cat gu
 mv geuzel.txt guezel.txt
 vim taito
-cd devel/st
 cd devel/ports_own/dwb
 dwb -V
-prt-cache info webkit
 man audacious
 man audtool
 java -jar LinShredder.jar
-../zsh
 cd embutils
 less CHANGES
 cvs diff mount.c
@@ -9395,9 +8990,6 @@ cvs diff -r 1.2 -r 1.3 arch.c
 cvs log mount.c
 ../minit
 cvs up
-cvs -z3 up
-../sxiv
-make
 ./sxiv
 ./sxiv ~/images/hotgirls
 ./sxiv -h
@@ -9407,28 +8999,23 @@ top
 rm -r .surf
 cd .config/s
 cat guezel.txt
-less config.h
 mkdir .sxiv
 cd -2
 cd ..cd
 cd .cache
-man feh
 prt-cache info sxiv
 prt-cache readme sxiv
 cd devel/sx
 cd devel/sxiv
 rm -rf sxhkd
 cd sxiv
-less config.def.h
 cd /usr/ports/contrib/sx
 diff -u config.h ~/devel/sxiv/config.h
 ql
 ./sxiv -t -r ~/images/hotgirls
 l ../../.sxiv
-cat README
 cd /usr/ports/contrib/sxiv
 cat config.h
-sudo pkgmk -i
 cd .sxiv
 fl
 mkdir cache
@@ -9454,7 +9041,6 @@ rm ~/images/hotgirls/46981_MCFan_for_Celeblounge28_02_201311_59_14_122_336lo.jpg
 rm ~/images/hotgirls/shenae-grimes-cw-premiere-party-j0001-018.jpg
 rm images/hotgirls/976765241.jpg
 wget -P .vim/colors https://raw.github.com/muennich/dotfiles/master/.vim/colors/bored.vim
-vim
 touch muennich
 vim muennich
 lcd
@@ -9462,10 +9048,8 @@ rm muennich
 cd devel/bar
 cd musl
 cd tcpcrypt
-../xcmenu
 ../bspwm
 rm -rf bspwm
-cd dwb
 less version.mk
 sudo nvidia-settings
 xset -dpms
@@ -9475,13 +9059,11 @@ less dwbem/dwbem.c
 grep -ir webkit .
 less src/view.h
 less src/view.c
-cd src
 less html.h
 less html.c
 less /usr/include/webkitgtk-3.0/webkit2/WebKitAuthenticationRequest.h
 lesspipe.sh /tmp/webkit\#2.2.4-1.pkg.tar.gz
 grep -ir webkitgtk .
-cd configs/xcolors
 touch iv
 vim iv
 cat CTX.DAT
@@ -9489,7 +9071,6 @@ cat CTX.DAT
 rm CTX.DAT
 wget -P .vim/colors https://raw.github.com/w0ng/vim-hybrid/master/colors/hybrid.vim
 vim devel/bar/bar.c
-vim .vimrc
 prt-cache fsearch imlib2setroot
 prt-cache fsearch imlibsetroot
 prt-cache search imlibsetroot
@@ -9499,7 +9080,6 @@ vim hlwm-dzen2
 less autostart
 prt-cache info firefox
 cd /usr/ports/core/prt-get
-less README
 less prt-get.aliases
 cp /var/cache/pkgmk/sources/prt-get-5.19.tar.gz .
 cp /var/cache/pkgmk/sources/prt-get-5.19.tar.gz /tmp
@@ -9523,7 +9103,6 @@ sudo pkgadd -u /tmp/firefox\#27.0-3.pkg.tar.gz
 wget http://crux.ster.so/packages/3.0/webkit%232.2.4-1.pkg.tar.gz
 sudo cp webkit\#2.2.4-1.pkg.tar.gz /var/cache/pkgmk/packages
 cd /proc
-ps ax
 cd 183
 cat cmdline
 cat maps
@@ -9579,17 +9158,12 @@ man -k signal
 man sigusr
 man -i sigusr
 man -k sigusr
-wmname LG3D
-../ldm
-../dwb
 less /proc/kallsyms
 man fork
 run-help size
 zcat /proc/config.gz | grep -i child
 zcat /proc/config.gz | grep -i sched
 date
-sxiv -t -r ~/images/hotgirls
-man sxiv
 man setbug
 man setbuf
 man kill
@@ -9634,8 +9208,6 @@ rm -r Desktop
 rm -r Downloads
 sudo sv stop alsa
 cd devel/dwb
-../herbstluftwm
-git log
 cd /lib/firmware/intel
 find /lib -name iwlwifi*
 find /lib -name "iwlwifi*"
@@ -9681,7 +9253,6 @@ rm -r linux-3.10
 sudo rm -r linux-3.10
 sudo rm linux-3.10.tar.xz
 sudo rm -r linux-3.8.7.tar.bz2
-du --si .
 sudo cp -r . ~/tmp
 sudo runit-init 0
 sudo insmod
@@ -9709,11 +9280,9 @@ lsmod
 sudo ldconfig
 sudo prt-cache depinst alsa-utils
 vim /etc/fstab
-sudo ports -u && sudo prt-get cache
 prt-cache search locale
 cd /usr/share/kbd/keymaps/include
 cd i386
-prt-cache search dmenu
 sudo prt-cache depinst dmenu
 localedef --usage
 cd include
@@ -9728,7 +9297,6 @@ sudo pkgrm glibc32
 sudo pkgrm glibc-32
 sudo vim /etc/pkgmk.conf\~
 cd pkgmk
-prt-cache depends dwb
 cd /etc/rc.d/
 less ntpd
 sudo vim ../rc.conf
@@ -9752,24 +9320,19 @@ sudo prt-cache update xulrunner
 sudo prt-cache depends firefox
 ldd /usr/lib/firefox/firefox-bin
 sudo prt-cache update nss
-htop
 localedef
-firefox
 sudo prt-cache update sqlite3
 sudo localedef -i en_us -f UTF-8 en_us.UTF-8
 mkdir dzen
 cd dzen
 wget https://raw.github.com/zero-io/ports/master//dzen/Pkgfile
-sudo prt-get cache
 sudo prt-cache depinst dzen
 find /usr/share -name "en*"
 sudo localedef -i en_US -f UTF-8 en_us.UTF-8
 grep -ir LANG .
 export LC_ALL=en_us.UTF-8
 export LC_CYTPE=en_us.UTF-8
-perl -v
 sudo prt-cache remove xorg-xf86-video-vesa xorg-xf86-video-trident xorg-xf86-video-tga xorg-xf86-video-savage xorg-xf86-video-nouveau xorg-xf86-video-neomagic xorg-xf86-video-mga xorg-xf86-video-intel xorg-xf86-video-glint xorg-xf86-video-ati xorg-xf86-input-synaptics
-/tmp
 sudo tar xfz slim-fingerprint.tar.gz -C /usr/share/slim/themes/
 ls -l /usr/share/slim/themes
 sudo prt-cache search flash
@@ -9781,22 +9344,18 @@ sudo alsaconf
 sudo alsamixer
 sudo alsactl store
 less alsa
-cd bin
 less dvol2
 rm dvol
 cat changevol
 rm changevol
 cd tm
-cd tmp
 cd devel/ports/dzen
 cd ~
-ll
 prt-cache dependent syslinux
 sudo pkgrm syslinux
 sudo prt-cache sysup -
 sudo prt-cache sysup -test
 cd /etc
-rm .zcompdump
 ~/.zsh
 prt-cache readme grub2
 less opts
@@ -9809,7 +9368,6 @@ sudo prt-cache depinst strace
 strace -f -o /tmp/zsh.strace zsh
 strace -f -o /tmp/zsh.strace1 zsh
 less /tmp/zsh.strace1
-sudo prt-cache sysup --test
 echo $PROMPT
 sudo prt-cache sysup
 prt-cache info gcc
@@ -9821,13 +9379,11 @@ less compinit
 echo $PWD
 sudo su
 qsu
-rm .zshrc.zwc
 ls
 dmesg
 sudo rm /etc/rc.conf\~
 sudo /etc/rc.d/ntpd stop
 cd /usr/ports/opt/openntpd
-cat post-install
 sudo groupadd ntp
 sudo useradd -g ntp -d /var/empty -s /bin/false ntp
 sudo passwd -l ntp
@@ -9838,15 +9394,12 @@ sudo mount /dev/sdb2 /mnt/misc
 cd /mnt/misc
 les etc/slim.conf
 less etc/slim.conf
-sudo vim /etc/slim.conf
-w
 sudo cp etc/slim.conf /etc
 sudo reboot
 sudo vim /etc/rc.d/ntpd
 sudo cp .vimrc /root
 sudo cp .vim /root
 sudo cp -r .vim /root
-echo $LC_ALL
 sudo prt-cache depends audacious
 run-help prt-get
 sudo prt-cache depinst audacious --args=-i
@@ -9871,7 +9424,6 @@ prt-cache fsearch ffaudio.so
 sudo prt-cache depinst audacious-plugins --margs=-uf
 cd .config/audacious
 sudo /etc/rc.d/dbus start
-audacious
 sudo vim /etc/prt-get.conf
 sudo vim /etc/rc.conf
 df
@@ -9918,10 +9470,8 @@ cd. zsh
 rm -r cache
 rm -r .zcompdump
 rm -r .zshrc.zwc
-rm .zcompdump.zwc
 .
 cd /usr/ports/opt/rxvt-unicode
-cat .footprint
 find . -name "*rxvt*"
 print -p '%~'
 grep -ir autocd .
@@ -9931,22 +9481,16 @@ unsetopt -T
 setopt autoc
 setopt autocd
 cd /usr/ports/opt/zsh
-cd .zsh
 print -P "%~'
 print -P '%~'
-cd /usr/share/i18n/locales
 cd charmaps
-cd /usr/lib/locale
 less locale-archive
 prt-cache search localpurge
-run-help localedef
 sudo rm locale
 cd locale
-sudo rm locale-archive
 sudo localedef -i en_US -f UTF-8 en_us.utf-8
 locale -a -v
 man localedef
-sudo localedef -i en_US -f ISO-8859-1 en_us.ISO-8859-1
 grep Z .
 grep M .
 grep -R M .
@@ -9954,205 +9498,579 @@ vim misc
 sudo vim /etc/passwd
 login
 less /etc/passwd
-pwd
-sudo /etc/rc.d/slim restart
-sudo /etc/rc.d/slim start
 cd loa
 man useradd
 hash -d
 echo ${HOME}
 echo ${HOME%/}
-mupdf documents/linux_programming/Linux.Programming.Interface.Oct.2010.pdf
 prt-cache search urxvt
 sudo prt-cache depinst urxvt-perl
 sudo prt-cache depinst urxvt-perls
-cd devel/ports
 sudo prt-cache search dwb
 cd ../ports_own/dwb
 ../dzen2
 ../
 cat gcc
 cd gcc
-gcc -v
-..
 cd herbstluftwm
-cd devel/herbstluftwm
-git pull
 cd ..
 cp -r dwb /root
 cd devel/ports_own/rxvt-unicode-patched
-cat Pkgfile
-sudo pkgmk -uf
 sudo pkgmk -uum
 sudo pkgmk -um
-vim Pkgfile
-sudo pkgmk -d
-xrdb -remove .Xresources
-xrdb -merge ~/.Xresources
 prt-cache list
 prt-cache list | grep -i fonts
 fc-cache
 fc-cache -v
 local
-zsh
-echo $OSTYPE
-Z
-vim export
-locale -a
-cd
-vim .Xresources
-src
-locale
+cd /usr/ports/contrib/dmenu
+cp pkgmk/sources/dmenu-4.5.tar.gz tmp
+tar xfz dmenu-4.5.tar.gz
+cd dmenu-4.5
+grep -ri "no locale support" .
+grep -rin "no locale support" .
+vim draw.c
+echo $LC_TYPE
+LOCALE
+export LC_TYPE=en_us.utf8
+unset LC_TYPE
+man XSupportsLocale
+sudo localedef -i en_US -f UTF-8 en_US.utf-8
+locale -v
+firefox
+export LANG=en_us.iso88591
+export LANG=en_US.UTF-8
+less ~/bin/dmenu_launch.sh
+prt-cache search dmenu
+man setlocale
+DMENU
+dmenu
+less /etc/rc.conf
+man rc.conf
 vim .xinitrc
 sudo /etc/rc.d/slim stop
+sudo /etc/rc.d/slim s
 cp -r .adobe /root
+cd zsh
+rm -r prompt
+mv prompt2 prompt
+vim ~/.zshrc
+echo $OS
+echo $OSTYPE
+echo $VIMRELEASE
+echo $VIMRUNTIME
+cd /usr/share/vim
+cat misc
+cat ctl
+cat alias
+cat binds
+cat co
+cat colors
+cat compinit
+cd configs/zsh
+cat prompt
+cd .git
+less config
+less .git
+lless .git/COMMIT_EDITMSG
+less.git/COMMIT_EDITMSG
+less.git /COMMIT_EDITMSG
+less .git/COMMIT_EDITMSG
+less .git/index
+cd configs
+git pull github.com: master
+git pull github.com:destruct master
+git push orgin master
+git push origin master
+cd .zsh
+rm -r zsh-syntax-highlighting
+rm -rf zsh-syntax-highlighting
+vim ../.zshrc
+less .gitignore
+diff -u alias ../configs/zsh/alias
+alias | grep -i grep
+less zshrc
+diff -u zshrc ~/.zshrc
+cp ~/.zshrc .
+cp ~/.zsh/* zsh
+ln -s configs/zsh .zsh
+ls -lal
+rm .zshrc
+ln -s configs/zshrc .zshrc
+ls -al
+kill -9 10345
+kill -s SIGTERM 14267
+kill -9 14267
+cat /proc/579/status
+os ax
+cat /proc/236/status
+ps ax |grep -i audacious
+cat /proc/17634/status
+less /proc/sysvipc/msg
+cd /usr/ports/contrib/sxhkd
+man sxiv
+cd -
+man feh
+cd /tmp/vimpager_32567
+cat stdin
+rm -r vimpager_32567
+man ls
+man less
+prt-cache search 0ad
+git commit -m "Delete dot zshrc" .zshrc
+cd devel/herbstluftwm
+T
+mpv DiB-34452\ Maitresse\ Madeline\ and\ Garett\ Nova/DiB\ -\ Jan\ 15,\ 2014\ -\ Maitresse\ Madeline\ and\ Garett\ Nova\ \(34452\).mp4
+sudo prt-cache update man-pages sqlite3
+man syscall
+tar xfz vimpager-1.8.4.tar.gz
+cd vimpager-1.8.4/
+cp vimpager ~/bin
+cd bin
+rm vimpager
+wget https://raw.github.com/rkitover/vimpager/master/vimpager
+chmod u+x vimpager
+less /tmp/vimpager_25744/stdin
+lesspipe.sh
+strace -f -o /tmp/vimpager.strace man syscalls
+kill 26116
+kill -9 26116
+vim /tmp/vimpager.strace
+find /usr/share/vim -name "less*"
+vim bin/vimpager
+man syscalls
+prt-cache search jre
+cd /usr/ports/opt/jdk
+less ../jre/.footprint
+less Pkgfile
+less ../jre/Pkgfile
+../jre
+cat R
+cp jre-7u51-linux-x64.tar.gz pkgmk/sources
+sudo cp jre-7u51-linux-x64.tar.gz pkgmk/sources
+rm jre-7u51-linux-x64.tar.gz
+cd /usr/ports/opt/firefox-java-plugin
+sudo prt-cache update flex file xorg-xcb-util-wm
+htop
+../bar
+../dwb
+../ldm
+../herbstluftwm
+../smdev
+../sxiv
+../xcmenu
+git pull]
+../zsh
+grep -ir mustafa .
+ls -l pkgmk/packages/gcc\#4.8.2-1.pkg.tar.gz
+sudo pkgadd -u pkgmk/packages/gcc\#4.8.2-1.pkg.tar.gz
+gcc -v
+cd devel/audacious
+../embutils
+sudo prt-cache depinst cvs
+cvs -z3 up
+cvs status
+prt-cache search wmname
+prt-cache depends wmname
+sudo prt-cache depinst wmname
+wmname LG3D
+zcalc
+prt-cache search jin
+prt-cache info jin
+cd jin
+cat post-install
+cat README
+lesspipe.sh pkgmk/sources/jin-2.14.1.tar.xz
+run-help lesspipe.sh
+less /tmp/patch.txt
+sudo pkgmk -i
+jin
+sudo ./post-install
+ls -l /usr/bin/jin
+cd dde
+git clone https://github.com/thestinger/termite.git
+prt-cache search termite
+prt-cache search vte
+prt-cache info vte
+prt-cache depends vte
+less README.rst
+prt-cache fsearch vte-2.90
+prt-cache remove vte
+sudo prt-cache remove vte
+sudo prt-cache install vte
+cd util
+rm -rf termite
+git clone --recursive
+git clone --recursive https://github.com/thestinger/termite.git
+cd termite
+prt-cache isinst gtk
+less /usr/include/gtk-2.0/gdk/gdkx.h
+prt-cache fsearch gdkx.h
+cd /usr/include
+less gtk-2.0/gdk/gdkprivate.h
+sudo ln -s gtk-2.0 gtk
+ls -l gtk
+sudo rm gtk
+vim termite.
+vim termite.cc
+rm -r termite
+rm -r termite -f
+prt-cache depedns dwb
+alias
+prt-cache fsearch audtool
+less ports/audacious/.footprint
+find / -name audtool
+find . -name audtool
+./audtool help
+./audtool current-song
+cd man
+C --prefix=/usr/ --disable-nls --enable-chardet
+less config.log
+C --prefix=/usr/ --disable-nls
+./audtool
+rsync -aqz obra.se::ports/audacious/ audacious
+cd audacious/u
+cat audacious/.footprint
+cat .fo
+cd ../ports/audacious/..
+cd ../ports/audacious/
+cat cat .footprint
+cd /usr/share/audacious/images
+feh menu_playlist.png
+cd -1
+cat audacious/Pkgfile
+cd audacious
+rm -rf audacious
+kill -9 32669
+gdb audacious
+sudo prt-cache depinst gdb
+sudo pkgadd pkgmk/packages/gdb\#7.7-1.pkg.tar.gz
+gdb audcious
+gdb src/audacious/audacious
+wget -P configs/xcolors/ https://github.com/chriskempson/base16-xresources/blame/master/base16-default.dark.xresources
+ls -l configs/xcolors
+less base16-default.dark.xresources
+wget https://raw.github.com/chriskempson/base16-xresources/master/base16-default.dark.xresources
+kill -9 audacious
+kill -9 15231
+gdb /usr/bin/audacious
+kill -9 16523
+q
+kill -9 16527
+cd configs/xcolors
+rm base16-default.dark.xresources
+wget https://raw.github.com/chriskempson/base16-xresources/master/base16-solarized.dark.xresources
+vim bin/audiotag
+xrdb -remove ~/.Xresources
+run-help ipcs
+cd configs/
+rm xcolors/base16-solarized.dark.xresources
+rm mutt/mutt.colors_vimbrant
+less mutt/mutt.lucas
+rm mutt/mutt.lucas
+git diff
+git diff vimrc
+git diff xinitrc
+git commit -m "change xinitrc" xinitrc
+git pussh
+git push
+prt-cache search virtual
+prt-cache depends virtualbox
+rm -r bspwm
+rm -r steam-32
+cat xsel/Pkgfile
+run-help xsel
+rm test.html
+../ports_own
+rm -r firefox-bin
+cd firefox-bin
+cd dwb
+cp -r dwb/ ../ports
+sudo prt-get cache
+prt-cache depends dwb
+prt-cache depends webkit
+prt-cache info webkit
+du --si .
+rame
+cd Linkin_Park_-_Recharged_\(2013\)_FLAC
+cp -r Linkin_Park_-_Recharged_\(2013\)_FLAC ~/music/Linkin_Park_Complete_Discography_320kbps
+ls -l /usr/bin/audacious
+cd devel/ports/audacious
+run-help install
+grep -ir install .
+../audacious/src/audtool
+cd pkgmk/packages/
+ls -d
+lsd
+run-help cd
+cd devel/audacious/
+../ports/audacious
+cd work/src/audacious-3.4.3/src/audtool
+cd ../audtool
+...
+cd -8
+cd work/pkg
+../src
+cd audacious-3.4.3/src
+cd ../src/audacious-3.4.3/src/audtool
+pwd
+cd devel/ports
+grep -ir cp .
+cd ~/pkgmk/sources
+rm dwb-git.tar.gz.partial firefox-25.0.1.source.tar.bz2.partial firefox-25.0.1.tar.bz2.partial jdk-7u51-linux-x64.tar.gz.partial jre-7u51-linux-x64.tar.gz.partial runit-sv-2.1.1-1.tar.gz.partial rxvt-unicode-patched-9.18.tar.bz2.partial rxvt-unicode-patched-9.19.tar.bz2.partial syslinux-5.10.tar.xz.partial vim-7.4.94.tar.bz2.partial
+sudo rm dwb-git.tar.gz.partial firefox-25.0.1.source.tar.bz2.partial firefox-25.0.1.tar.bz2.partial jdk-7u51-linux-x64.tar.gz.partial jre-7u51-linux-x64.tar.gz.partial runit-sv-2.1.1-1.tar.gz.partial rxvt-unicode-patched-9.18.tar.bz2.partial rxvt-unicode-patched-9.19.tar.bz2.partial syslinux-5.10.tar.xz.partial vim-7.4.94.tar.bz2.partial
+sudo tar xfj audacious-3.4.3.tar.bz2
+cd audacious-3.4.3/
+sudo C --prefix=/usr
+sudo ./configure --prefix=/usr
+cd src/aud
+sudo rm audacious-3.4.3
+sudo rm audacious-3.4.3 -r
+cp audacious-3.4.3.tar.bz2 ~/tmp
+cd tmp
+tar xfz audacious-3.4.3.tar.bz2
+tar xfj audacious-3.4.3.tar.bz2
+cd audacious-3.4.3
+vim Makefile
+make -j4
+grep -ir audtool .
+less Makefile
+less buildsys.mk
+less extra.mk
+make distclean
+C --prefix=/usr --enable-dbus
+prt-cache isinst dbus
+cat Pkgfile
+ps ax | grep -i dbus
+less post-install
+less rc.dbus
+cat .footprint
+grep -ir dbus .
+sudo prt-cache depends dbus-glib
+sudo prt-cache install dbus-glib
+cd /usr/ports/opt/dbus
+../dbus-glib
+C --pre/u
+C --prefix=/usr
+sudo make
+sudo make -j4
+cd src/audtool
+vim Pkgfile
+sudo pkgmk -uf
+np
+run-help gtk-update-icon-cache
+less .footprint
+gtk-update-icon-cache /usr/share/icons/hicolor
+sudo gtk-update-icon-cache /usr/share/icons/hicolor
+audacious
+strace -f -o /tmp/audacios.strace audacious
+grep -ir icon audacios.strace
+ipcs
+cd devel
+git clone https://github.com/chokepoint/azazel.git
+mpv /tmp/sbh1392455334023.mp4
+sudo ports -u && sudo prt-get cache
+sudo prt-cache sysup --test
+sudo prt-cache dependent opencore-amr
+sudo prt-cache update opencore-amr
+less /var/lib/pkg/db
+less comp
+less ctl
+less FAQ
+git pull
+grep -ir bellvolume .
+grep -irn bellvolume .
+less config.h
+make dist
+rm st-0.4.1.tar.gz
+make celan
+make clean
+vim devel/st/st.c
+less config.def.h
+man static
+git sttaus
+git status
+git log
+rm -rf st
+http://git.suckless.org/st
+git clone http://git.suckless.org/st
+c st
+cd st
+man XopenDisplay
+prt-cache depends st
+sudo prt-cache depinst st
+sudo st
+sudo prt-cache depinst ctags
+prt-cache search xlib
+prt-cache fsearch xlib
+export DISPLAY=:0
+export DISPLAY=localhost:0
+strace -f -o /tmp/st.strace ./st
+less /tmp/st.strace
+xhost +
+export DISPLAY=:0.0
+st
+ps ax
+ps ax | grep -i X
+less /usr/include/X11/Xlib.h
+kill -9 4519
+..
+cvs -z3 -d :pserver:anonymous@cvs.schmorp.de/schmorpforge co rxvt-unicode
+cd rxvt-unicode
+cd src
+grep -ir xopendisplay .
+vim rxvttoolkit.C
+/tmp
+strace -f -o urxvt.strace urxvtc
+run-help localedef
+run-help pkginfo
+pkginfo -o es_CR
+cd /usr/ports/core/glibc
+printenv POSIXLY_CORRECT
+locale
+cd /usr/share/i18n/locales
+file en_US
+less en_US
+less aa_DJ
+cd /usr/lib/locale
+rm locale-archive
+sudo rm locale-archive
+sudo localedef -c -f UTF-8 -i en_US en_US.UTF-8 -v
+sudo locl
+cat locale-archive
+sudo localedef -i en_US -f ISO-8859-1 en_us.ISO-8859-1
+sudo localedef -i en_US -f ISO-8859-1 en_us.ISO-8859-1 -v
+sudo localedef -c -f UTF-8 -i en_US en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+echo $LC_ALL
+vim
+/usr/bin/vim /.zsh/export
+vim .zsh/export
+sudo localedef -c -f UTF-8 -i en_US en_us.UTF-8
+/usr/bin/sudo localedef -c -f UTF-8 -i en_US en_us.UTF-8
+sudo localedef -i en_US -f UTF-8 en_us.UTF-8 -v
+perl v
+rm .zcompdump
+rm .zcompdump.zwc
+rm .zshrc.zwc
+zsh
+id
+whereis is
+whereis id
+echo $PATH
+urxvt
+vim .Xresources
+xrdb -remove .Xresources
+xrdb -merge ~/.Xresources
+Z
+sudo localedef -i en_US -f UTF-8 en_us.utf8 -v
+sudo localedef -i en_US -f UTF-8 en_US.UTF-8 -v
+sudo localedef -i en_US -f UTF-8 en_US.UTF-8
+export LC_ALL="en_US.utf8"
+vim export
+perl -v
+src
+urxvtc
+unset DISPLAY
+echo $DISPLAY
+killall audacious
+kill -9 27123
+sxiv -t -r ~/images/hotgirls
+locale -a
+sudo vim /etc/slim.conf
+sudo /etc/rc.d/slim restart
+sudo /etc/rc.d/slim start
 loadstate.sh < ~/bin/mylayout
-l
-cd /usr/ports/contrib/dmenu
+cd devel/st
+less README
+tic
+less .terminfo
+less .terminfo/s/st-256color
+cd
+cd devel/ports_own/vim
+sudo pkgmk -d
 sudo pkgmk -f
+mupdf documents/linux_programming/Linux.Programming.Interface.Oct.2010.pdf
 sudo pkgmk -u
-dmenu
-: 1392228269:0;l
-: 1392228270:0;cd
-: 1392228330:0;cp pkgmk/sources/dmenu-4.5.tar.gz tmp
-: 1392228331:0;cd tmp
-: 1392228333:0;tar xfz dmenu-4.5.tar.gz
-: 1392228335:0;cd dmenu-4.5
-: 1392228349:0;grep -ri "no locale support" .
-: 1392228360:0;grep -rin "no locale support" .
-: 1392228364:0;vim draw.c
-: 1392228379:0;echo $LC_TYPE
-: 1392228393:0;LOCALE
-: 1392228395:0;locale
-: 1392228402:0;export LC_TYPE=en_us.utf8
-: 1392228404:0;dmenu
-: 1392228422:0;man setlocale
-: 1392228491:0;locale
-: 1392228505:0;unset LC_TYPE
-: 1392228507:0;dmenu
-: 1392228540:0;man XSupportsLocale
-: 1392228588:0;cd /usr/lib/locale
-: 1392228589:0;l
-: 1392228604:0;sudo localedef -i en_US -f UTF-8 en_US.utf-8
-: 1392228607:0;locale -v
-: 1392228612:0;locale -a
-: 1392228631:0;export LC_CTYPE=en_US.UTF-8
-: 1392228633:0;dmenu
-: 1392228643:0;firefox
-: 1392228674:0;locale
-: 1392228699:0;src
-: 1392228707:0;export LANG=en_us.iso88591
-: 1392228709:0;dmenu
-: 1392228713:0;export LANG=en_US.UTF-8
-: 1392228715:0;dmenu
-: 1392228776:0;less ~/bin/dmenu_launch.sh
-: 1392228890:0;cd
-: 1392228908:0;prt-cache search dmenu
-: 1392228928:0;l
-: 1392228953:0;man setlocale
-: 1392229016:0;sudo localedef -i en_US -f UTF-8 en_US.UTF-8
-: 1392229022:0;DMENU
-: 1392229024:0;dmenu
-: 1392229032:0;export LC_CTYPE=en_US.UTF-8
-: 1392229034:0;dmenu
-: 1392229063:0;less /etc/rc.conf
-: 1392229074:0;man rc.conf
-: 1392229120:0;vim .xinitrc
-: 1392229155:0;sudo /etc/rc.d/slim stop
-: 1392229160:0;sudo /etc/rc.d/slim s
-: 1392229162:0;sudo /etc/rc.d/slim start
-: 1392229174:0;perl -v
-: 1392229176:0;l
-: 1392229183:0;locale
-: 1392229190:0;cp -r .adobe /root
-: 1392229195:0;loadstate.sh < ~/bin/mylayout
-: 1392229212:0;mupdf documents/linux_programming/Linux.Programming.Interface.Oct.2010.pdf
-: 1392229757:0;l
-: 1392229763:0;cd configs
-: 1392229763:0;l
-: 1392229767:0;cd zsh
-: 1392229768:0;l
-: 1392229774:0;Z
-: 1392229777:0;cd
-: 1392229781:0;cd -1
-: 1392229782:0;l
-: 1392229784:0;rm -r prompt
-: 1392229789:0;mv prompt2 prompt
-: 1392229793:0;vim ~/.zshrc
-: 1392229803:0;l
-: 1392229805:0;vim export
-: 1392229825:0;echo $OS
-: 1392229830:0;echo $OSTYPE
-: 1392229872:0;echo $VIMRELEASE
-: 1392229880:0;echo $VIMRUNTIME
-: 1392229884:0;cd /usr/share/vim
-: 1392229884:0;l
-: 1392229885:0;cd
-: 1392229890:0;l
-: 1392229893:0;cat misc
-: 1392229895:0;l
-: 1392229901:0;cat ctl
-: 1392229919:0;l
-: 1392229921:0;cat alias
-: 1392229922:0;cat binds
-: 1392229923:0;l
-: 1392229924:0;cat co
-: 1392229926:0;cat colors
-: 1392229929:0;l
-: 1392229932:0;cat compinit
-: 1392229937:0;l
-: 1392229937:0;src
-: 1392229939:0;l
-: 1392230266:0;cd
-: 1392230366:0;cd configs/zsh
-: 1392230366:0;l
-: 1392230368:0;cat prompt
-: 1392230376:0;l
-: 1392230377:0;..
-: 1392230377:0;l
-: 1392230378:0;cd .git
-: 1392230379:0;l
-: 1392230382:0;less config
-: 1392230393:0;..
-: 1392230393:0;l
-: 1392230396:0;git pull
-: 1392230462:0;l
-: 1392230466:0;less .git
-: 1392230470:0;lless .git/COMMIT_EDITMSG
-: 1392230475:0;less.git/COMMIT_EDITMSG
-: 1392230480:0;less.git /COMMIT_EDITMSG
-: 1392230485:0;less .git/COMMIT_EDITMSG
-: 1392230487:0;l
-: 1392230497:0;less .git/index
-: 1392230524:0;..
-: 1392230525:0;cd configs
-: 1392230527:0;git pull
-: 1392230559:0;git pull github.com: master
-: 1392230571:0;git pull github.com:destruct master
-: 1392230576:0;l
-: 1392230587:0;git push
-: 1392230710:0;git push orgin master
-: 1392230720:0;git push origin master
-: 1392230732:0;l
-: 1392230737:0;cd .zsh
-: 1392230737:0;l
-: 1392230746:0;rm -r zsh-syntax-highlighting
-: 1392230750:0;rm -rf zsh-syntax-highlighting
-: 1392230751:0;l
-: 1392230772:0;vim ../.zshrc
-: 1392230814:0;l
-: 1392230833:0;less .gitignore
-: 1392230841:0;l
-: 1392230857:0;diff -u alias ../configs/zsh/alias
-: 1392230892:0;alias
-: 1392230909:0;alias | grep -i grep
-: 1392230931:0;alias
-: 1392230940:0;l
-: 1392230956:0;git log
-: 1392230960:0;l
-: 1392230964:0;less zshrc
-: 1392230974:0;diff -u zshrc ~/.zshrc
-: 1392230984:0;cp ~/.zshrc .
-: 1392230985:0;l
-: 1392230988:0;git log
-: 1392231020:0;cp ~/.zsh/* zsh
+vim config.def.h
+sudo pkgrm st
+grep -i locale
+grep -ir locale .
+w
+less /tmp/st-0.3-clipboardpaste.diff
+less .Xresources
+./steam
+ll
+vim .vimrc
+vim config.
+vim st.c
+tic -s st.info
+.st
+less configs/xcolors/sicp
+sudo vim config.h
+l
+vim config.h
+make
+./st
+: 1392477728:0;sxiv -t -r ~/images/hotgirls
+: 1392477928:0;man sxiv
+: 1392478631:0;mpv torrents/The.Jenny.McCarthy.Show.2013.S01E01.HDTV.x264-YesTV.mp4
+: 1392478812:0;ps ax | grep -i her
+: 1392478819:0;w
+: 1392478824:0;wmname LG3D
+: 1392480250:0;cd bin/DeepShredder11
+: 1392480251:0;java -jar LinShredder.jar
+: 1392480653:0;cd ../herbstluftwm
+: 1392480654:0;git pull
+: 1392480657:0;../dwb
+: 1392480658:0;git pull
+: 1392480665:0;git log
+: 1392482760:0;git version
+: 1392482765:0;cd /usr/ports/opt/git
+: 1392482766:0;sudo vim Pkgfile
+: 1392482776:0;sudo pkgmk -d
+: 1392482804:0;sudo vim Pkgfile
+: 1392482808:0;sudo pkgmk -d
+: 1392482814:0;sudo pkgmk -uf
+: 1392482816:0;sudo pkgmk -um
+: 1392482817:0;sudo pkgmk -uf
+: 1392482818:0;sudo pkgmk -d
+: 1392483432:0;cd /usr/lib/git-core/mergetools
+: 1392483433:0;l
+: 1392483434:0;..
+: 1392483434:0;l
+: 1392483439:0;less git-lost-found
+: 1392483505:0;sudo pkgmk -uf
+: 1392483507:0;sudo pkgmk -u
+: 1392483509:0;git version
+: 1392483516:0;cd
+: 1392483517:0;cd tmp
+: 1392483519:0;wget http://istihbaratdunyasi.files.wordpress.com/2012/06/necip-hablemitolu-fethullah-stihbaratlar-dosyas.pdf
+: 1392484020:0;prt-cache depends dwb
+: 1392484023:0;prt-cache depends dwm
+: 1392484027:0;cd /usr/ports/contrib/dwm
+: 1392484027:0;l
+: 1392484028:0;cat README
+: 1392484038:0;cd /usr/ports/contrib/st
+: 1392484038:0;l
+: 1392484076:0;cat README
+: 1392484084:0;cat Pkgfile
+: 1392487031:0;Z
+: 1392487032:0;l
+: 1392487034:0;git status
+: 1392487036:0;pwd
+: 1392487037:0;cd
+: 1392487042:0;cd configs/
+: 1392487043:0;git status
+: 1392487050:0;git show Xdefaults
+: 1392487053:0;git show
+: 1392487062:0;locale -a
+: 1392487068:0;vim .xinitrc
+: 1392487086:0;l
+: 1392487089:0;git show
+: 1392487100:0;git log
+: 1392487102:0;git status
+: 1392487149:0;vim .gitignore
+: 1392487160:0;git rm zsh/history
+: 1392487165:0;git status
+: 1392487181:0;git commit -m "remove zsh history" zsh/history
