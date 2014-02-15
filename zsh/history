@@ -1,2 +1,11 @@
-: 1392487242:0;git status
-: 1392487253:0;git commit -m "remove zsh history" zsh/history
+: 1392487328:0;git status
+: 1392487339:0;vim .git/info/exclude
+: 1392487435:0;cd zsh
+: 1392487436:0;l
+: 1392487437:0;cat history
+: 1392487480:0;..
+: 1392487552:0;git push
+: 1392487567:0;l
+: 1392487570:0;git status
+: 1392487582:0;git push zsh/history
+: 1392487607:0;git commit -m "remove zsh history" zsh/history
