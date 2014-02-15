@@ -1,11 +1,11 @@
 #!/bin/zsh
 
 # Completion for some stuff
-compctl -g '*.tar.Z *.tar.gz *.tgz *.zip *.ZIP *.tar.bz2' + -g '*' tar xtrct show-archive
+compctl -g '*.tar.Z *.tar.gz *.tgz *.zip *.ZIP *.tar.bz2 *tar.xz' + -g '*' tar xtrct show-archive
 compctl -g '*.(gz|z|Z|t[agp]z|tarZ|tz)' + -g '*(-/)' gunzip gzcat zcat
-compctl -g '*.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG|bmp)' + -g '*(-/)' gimp xv feh
-compctl -g '/var/db/pkg/*(/:t)' pkg_delete pkg_info
-compctl -g '*.(pdf|PDF)' + -g '*(-/)'  xpdf acroread
+compctl -g '*.(jpg|JPG|jpeg|JPEG|gif|GIF|png|PNG|bmp)' + -g '*(-/)' gimp xv feh sxiv
+compctl -g '/var/db/pkg/*(/:t)' pkg_delete pkg_info pkginfo pkgrm 
+compctl -g '*.(pdf|PDF)' + -g '*(-/)' mupdf  
 compctl -g '[^.]*(-/) *.(c|C|cc|c++|cxx|cpp)' + -f cc CC c++ gcc g++
 compctl -g '*.rar' + -g '*(-/) .*(-/)' rar unrar
 

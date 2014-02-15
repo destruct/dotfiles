@@ -127,34 +127,34 @@ esac
 # locale
 if [ "${OSTYPE}" = linux-gnu ] && [ -x $(which locale) ]; then
 	# All of the below
-        export LC_ALL="en_us.utf8"
+        export LC_ALL="en_US.utf8"
 	# language information
-        export LANG="en_us.utf8"
+        export LANG="en_US.utf8"
 	# Character classification and case conversion.
-        export LC_CTYPE="en_us.utf8"
+        export LC_CTYPE="en_US.utf8"
 	# Non-monetary numeric formats.
-        export LC_NUMERIC="en_us.utf8"
+        export LC_NUMERIC="en_US.utf8"
 	# Date and time formats.
-        export LC_TIME="en_us.utf8"
+        export LC_TIME="en_US.utf8"
 	# Collation order.
-        #export LC_COLLATE="en_us.utf8"
+        #export LC_COLLATE="en_US.utf8"
         export LC_COLLATE="C"
 	# Monetary formats.
-        export LC_MONETARY="en_us.utf8"
+        export LC_MONETARY="en_US.utf8"
 	# formats of informative and diagnostic messages and interactive responses.
-        export LC_MESSAGES="en_us.utf8"
+        export LC_MESSAGES="en_US.utf8"
 	# Paper size format.
-        export LC_PAPER="en_us.utf8"
+        export LC_PAPER="en_US.utf8"
 	# Define format of names.
-        export LC_NAME="en_us.utf8"
+        export LC_NAME="en_US.utf8"
 	# Format of addresses.
-        export LC_ADDRESS="en_us.utf8"
+        export LC_ADDRESS="en_US.utf8"
 	# Format of telephon numbers.
-        export LC_TELEPHONE="en_us.utf8"
+        export LC_TELEPHONE="en_US.utf8"
 	# Format of dimensions.
-        export LC_MEASUREMENT="en_us.utf8"
+        export LC_MEASUREMENT="en_US.utf8"
 	# Identify locale informations.
-        export LC_IDENTIFICATION="en_us.utf8"
+        export LC_IDENTIFICATION="en_US.utf8"
 else
         export LC_ALL=POSIX
 fi
