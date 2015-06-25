@@ -421,7 +421,7 @@ function dirsize()
 # mp3 -> wav
 function mkaudiocd()
 {
-        cd ~/stuff/ripps
+        cd ~/tmp/ripps
         for i in *.[Mm][Pp]3; do mv "$i" `echo $i | tr '[A-Z]' '[a-z]'`; done
         for i in *.mp3; do mv "$i" `echo $i | tr ' ' '_'`; done 
         for i in *.mp3; do mpg123 -w `basename $i .mp3`.wav $i; done 
