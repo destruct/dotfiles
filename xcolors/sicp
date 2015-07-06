@@ -1,10 +1,13 @@
-urxvt*background:                                #171717
+*background: rgb:00/00/00
+!urxvt*background:                                #171717
+!urxvt*background:                                #020202
 !urxvt*foreground:                                #FAFAFA
 !urxvt*foreground:                                #BDBDBD
 !urxvt*foreground:                                #D2D0C4
 !urxvt*foreground:                                #9A9A9A
-urxvt*foreground:                                #A3A6AB
-
+!urxvt*foreground:                                #A3A6AB
+!urxvt*foreground:                                #ADADAD
+*foreground: rgb:7f/7f/7f
 
 
 ! Black --------------------------------------------

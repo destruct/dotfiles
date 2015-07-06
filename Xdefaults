@@ -1,6 +1,5 @@
-#include "/home/musti/configs/xcolors/sicp"
+#include "/home/musti/configs/xcolors/two"
 
-!urxvt*imLocale:         en_US.utf8
 urxvt*geometry:         105x30
 urxvt*depth:            24
 urxvt*transparent:      true
@@ -9,6 +8,7 @@ urxvt*fading:           0
 urxvt*shading:          10
 urxvt*tintColor:        #000000
 urxvt*cursorColor:      #FD971F
+urxvt*cursorUnderline: True
 urxvt*inheritPixmap:    false
 urxvt*saveLines:        32767
 urxvt*visualBell:       true
@@ -23,14 +23,23 @@ urxvt*secondaryScroll:  true
 urxvt*mapAlert:         true
 urxvt*utmpInhibit:      true
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:  ,default,option-popup,matcher,clipboard,keyboard-select,url-select
+urxvt*perl-ext-common:  default,option-popup,matcher,clipboard,keyboard-select,url-select
 urxvt*keysym.M-c:	perl:clipboard:copy
 urxvt*keysym.M-v:	perl:clipboard:paste
+urxvt*keysym.M-C-v:	perl:clipboard:paste_escaped
 urxvt*url-launcher:      /usr/bin/firefox
 urxvt*matcher.button:   1
 
 *font: -windows-montecarlo-medium-r-normal--11-110-72-72-c-60-microsoft-cp1252
 *boldFont: -*-dina-medium-r-*-*-15-*-*-*-*-*-*-*
+
+! Xft settings ---------------------------------------------------------------
+!Xft.dpi:        92
+!Xft.antialias:  true
+!Xft.rgba:       rgb
+!Xft.hinting:    true
+!Xft.hintstyle:  hintslight
+!Xft.lcdfilter: lcddefault
 
 !==============================================================
 !
@@ -110,7 +119,8 @@ xcalc*button40.borderColor: olive drab
 
 
 !! various X stuff
-Xcursor.theme: Vanilla-DMZ
+!Xcursor.theme: Vanilla-DMZ
+Xcursor.theme: Faenza-Darker
 Xcursor.size: 10
 XFontSel*sampleText.background: TEXTBG
 XFontSel*menu*showUnselectable: false
